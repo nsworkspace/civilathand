@@ -1,0 +1,19 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { ArrowRight, Check } from "lucide-react";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { getSitePage, mergePageFallback } from "@/lib/siteContent";
+import { sectors } from "@/data/brandExperience";
+
+export const metadata: Metadata = { title: "Sectors", description: "Explore the sectors and project contexts Civil At Hand supports across engineering, design, documentation and digital workflows." };
+
+export default async function SectorsPage() {
+  const pageContent = mergePageFallback({ slug: "sectors", path: "/sectors", pageType: "existing", status: "published", title: "Sectors", description: "Explore the sectors and project contexts Civil At Hand supports.", heroTitle: "Sectors", heroDescription: "Explore the sectors and project contexts Civil At Hand supports." }, await getSitePage("sectors"));
+
+  return <div className="min-h-screen bg-slate-50"><Header /><main>
+    <section className="bg-navy-950 py-24 text-white md:py-32"><div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"><span className="text-[10px] font-extrabold uppercase tracking-[.22em] text-orange-400">Sectors & project context</span><h1 className="mt-4 max-w-4xl font-display text-4xl font-extrabold sm:text-6xl">{pageContent.heroTitle || "Engineering shaped by what you are building."}</h1><p className="mt-6 max-w-2xl text-sm leading-7 text-slate-300 sm:text-base">The same engineering discipline looks different in a residential building, industrial facility, infrastructure corridor or digital built-environment workflow. Our site now makes that context explicit.</p></div></section>
+    <section className="py-20 md:py-28"><div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"><div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">{sectors.map((sector, i) => { const Icon=sector.icon; return <article key={sector.title} className="group rounded-3xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-orange-200 hover:shadow-xl"><div className="flex items-center justify-between"><span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-navy-950 text-orange-400"><Icon className="h-5 w-5" /></span><span className="font-mono-tag text-[10px] text-slate-400">0{i+1}</span></div><h2 className="mt-7 font-display text-xl font-extrabold text-wix-dark">{sector.title}</h2><p className="mt-3 text-sm leading-6 text-slate-500">{sector.description}</p><ul className="mt-6 space-y-2 border-t border-slate-100 pt-5"><li className="flex gap-2 text-xs font-semibold text-slate-600"><Check className="h-4 w-4 text-orange-500" />Project-stage context</li><li className="flex gap-2 text-xs font-semibold text-slate-600"><Check className="h-4 w-4 text-orange-500" />Structured deliverables</li><li className="flex gap-2 text-xs font-semibold text-slate-600"><Check className="h-4 w-4 text-orange-500" />Clear technical scope</li></ul></article>; })}</div><div className="mt-12 rounded-3xl bg-white p-8 text-center shadow-sm ring-1 ring-slate-200"><h2 className="font-display text-2xl font-extrabold text-wix-dark">Have a project that does not fit one box?</h2><p className="mx-auto mt-3 max-w-2xl text-sm leading-6 text-slate-500">Use the Project Planner and describe the project in plain language. The brief is captured with the context your enquiry needs.</p><Link href="/project-planner" className="mt-6 inline-flex items-center gap-2 rounded-full bg-orange-500 px-6 py-3 text-xs font-extrabold uppercase tracking-widest text-white hover:bg-orange-600">Build a project brief <ArrowRight className="h-4 w-4" /></Link></div></div></section>
+  {pageContent.contentHtml && <section className="prose prose-slate mx-auto max-w-4xl px-4 pb-16 sm:px-6 lg:px-8" dangerouslySetInnerHTML={{__html: pageContent.contentHtml}} />}
+  </main><Footer /></div>;
+}
