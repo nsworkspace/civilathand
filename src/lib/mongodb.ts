@@ -59,4 +59,5 @@ function getClientPromise(): Promise<MongoClient> {
 
 // Keep the default export compatible with all existing API routes.
 const clientPromise = getClientPromise();
+clientPromise.catch(() => undefined);
 export default clientPromise;
