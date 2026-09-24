@@ -1,30 +1,1117 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
+
 @import "tailwindcss";
 
 @theme {
+  /* Shorthand aliases for the talk/chat page */
+  --color-cah-navy: #0c1a2e;
+  --color-cah-gold: #c8942a;
+
+  /* ── Premium Deep-Navy + Gold Palette ─────────────────────────── */
   --color-navy-950: #0c1a2e;
   --color-navy-900: #102240;
   --color-navy-800: #163354;
   --color-navy-700: #1e4168;
-  --color-gold-500: #c8942a;
-  --color-gold-600: #a87820;
-  --color-gold-400: #dba83c;
-  --color-gold-100: #fdf3dc;
-  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  --font-display: Georgia, "Times New Roman", serif;
+  --color-navy-600: #2c5282;
+
+  /* Gold accent — replaces generic orange for a more premium feel */
+  --color-orange-500: #c8942a;   /* burnished gold */
+  --color-orange-600: #a87820;   /* deep gold hover */
+  --color-orange-400: #dba83c;   /* light gold */
+  --color-orange-100: #fdf3dc;   /* gold tint */
+
+  --color-slate-50: #f6f8fb;
+  --color-slate-100: #eef1f6;
+  --color-slate-200: #dde3ed;
+
+  /* Structural-dark — slightly warmer deep navy (replaces wix-dark #111) */
+  --color-wix-dark: #0c1a2e;
+  --color-wix-gray: #f0f3f8;
+  --color-wix-cream: #f9f8f5;
+  --color-wix-blue: #1a56db;
+
+  --font-sans: 'Inter', sans-serif;
+  --font-display: 'Outfit', sans-serif;
 }
 
-html { scroll-behavior: smooth; }
+/* Base custom resets */
+html {
+  scroll-behavior: smooth;
+}
 
 body {
-  background: #f8fafc;
+  background-color: #f8fafc;
   color: #1e293b;
   font-family: var(--font-sans);
   overflow-x: hidden;
 }
 
+/* === Signature Blueprint / Drafting-table Motifs (Civil At Hand identity) === */
+
+/* Fine engineering grid — evokes a drafting sheet / structural drawing, not a generic SaaS gradient */
 .blueprint-grid {
   background-image:
-    linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
-  background-size: 48px 48px;
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(rgba(255, 255, 255, 0.09) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.09) 1px, transparent 1px);
+  background-size: 96px 96px, 96px 96px, 8px 8px, 8px 8px;
+  background-position: -1px -1px, -1px -1px, -1px -1px, -1px -1px;
 }
+
+.blueprint-grid-light {
+  background-image:
+    linear-gradient(rgba(10, 25, 47, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(10, 25, 47, 0.05) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+/* Drafting corner registration marks — the "printed technical sheet" cue */
+.blueprint-corner {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  border-color: rgba(200, 148, 42, 0.55);
+  pointer-events: none;
+}
+.blueprint-corner-tl { top: 0; left: 0; border-top: 1.5px solid; border-left: 1.5px solid; }
+.blueprint-corner-tr { top: 0; right: 0; border-top: 1.5px solid; border-right: 1.5px solid; }
+.blueprint-corner-bl { bottom: 0; left: 0; border-bottom: 1.5px solid; border-left: 1.5px solid; }
+.blueprint-corner-br { bottom: 0; right: 0; border-bottom: 1.5px solid; border-right: 1.5px solid; }
+
+/* Slow rotating compass/instrument accent used behind hero copy */
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.animate-spin-slow {
+  animation: spin-slow 40s linear infinite;
+}
+
+/* Marquee ticker for codified standards strip */
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.marquee-track {
+  animation: marquee-scroll 32s linear infinite;
+}
+
+/* Monospace technical tag, used for drawing-reference style labels */
+.font-mono-tag {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: 0.08em;
+}
+
+/* Custom visual utilities */
+.text-gradient-navy {
+  background: linear-gradient(135deg, #0a192f 30%, #20375a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-orange {
+  background: linear-gradient(135deg, #c8942a 0%, #dba83c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-glass {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.bg-glass-dark {
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.shadow-premium {
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05), 0 2px 6px -1px rgba(15, 23, 42, 0.02);
+}
+
+.shadow-premium-lg {
+  box-shadow: 0 10px 30px -5px rgba(15, 23, 42, 0.08), 0 4px 12px -2px rgba(15, 23, 42, 0.03);
+}
+
+.shadow-orange-glow {
+  box-shadow: 0 4px 14px 0 rgba(200, 148, 42, 0.35);
+}
+
+/* Hide scrollbars while keeping content scrollable (used in admin nav rails) */
+.scrollbar-none {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+/* Admin Control Center — premium dark surfaces */
+.admin-sidebar-surface {
+  background: linear-gradient(180deg, #0b1220 0%, #0a192f 60%, #0b1220 100%);
+}
+
+.admin-topbar-surface {
+  background: linear-gradient(90deg, rgba(10, 25, 47, 0.98) 0%, rgba(13, 17, 23, 0.98) 100%);
+}
+
+.admin-content-surface {
+  background: #f8fafc;
+}
+
+.admin-border-glow {
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.06);
+}
+
+.admin-accent-ring:focus-visible {
+  outline: 2px solid rgba(200, 148, 42, 0.5);
+  outline-offset: 2px;
+}
+
+/* Premium Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Micro-animations */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 0.25; }
+  50% { opacity: 0.45; }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 6s ease-in-out infinite;
+}
+
+/* Timeline Custom Styles */
+.timeline-line {
+  background: linear-gradient(to bottom, #c8942a 30%, #0c1a2e 100%);
+}
+
+/* Wix style premium UI utilities */
+.wix-btn-solid {
+  background-color: var(--color-wix-dark);
+  color: #ffffff;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid var(--color-wix-dark);
+  border-radius: 4px;
+  font-size: 11px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+.wix-btn-solid:hover {
+  background-color: transparent;
+  color: var(--color-wix-dark);
+}
+
+.wix-btn-outline {
+  background-color: transparent;
+  color: var(--color-wix-dark);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid var(--color-wix-dark);
+  border-radius: 4px;
+  font-size: 11px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+.wix-btn-outline:hover {
+  background-color: var(--color-wix-dark);
+  color: #ffffff;
+}
+
+/* Global Interactive Transition System */
+a, button, select, input, textarea, label, svg {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  transition-duration: 250ms;
+}
+
+.transition-smooth {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Fallback styling for WYSIWYG/markdown blog contents (prose-invert equivalent) */
+.prose-invert {
+  color: #cbd5e1 !important;
+}
+
+.prose-invert p {
+  color: #cbd5e1 !important;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  line-height: 1.625;
+  font-size: 0.875rem;
+}
+
+.prose-invert h1,
+.prose-invert h2,
+.prose-invert h3,
+.prose-invert h4 {
+  color: #ffffff !important;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  margin-top: 1.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.prose-invert h1 {
+  font-size: 1.5rem;
+}
+
+.prose-invert h2 {
+  font-size: 1.25rem;
+}
+
+.prose-invert h3 {
+  font-size: 1.125rem;
+}
+
+.prose-invert ul {
+  list-style-type: disc;
+  padding-left: 1.25rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: #cbd5e1 !important;
+}
+
+.prose-invert ol {
+  list-style-type: decimal;
+  padding-left: 1.25rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: #cbd5e1 !important;
+}
+
+.prose-invert li {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  color: #cbd5e1 !important;
+}
+
+.prose-invert a {
+  color: #c8942a !important;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.prose-invert a:hover {
+  color: #ffffff !important;
+}
+
+.prose-invert blockquote {
+  border-left: 3px solid #c8942a;
+  padding-left: 1rem;
+  font-style: italic;
+  color: #94a3b8 !important;
+  margin: 1.5rem 0;
+}
+
+.prose-invert hr {
+  border: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 2rem 0;
+}
+
+.prose-invert pre, 
+.prose-invert code {
+  font-family: monospace;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.25rem;
+  font-size: 0.85em;
+  color: #dba83c !important;
+}
+
+.prose-invert pre {
+  padding: 1rem;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+
+.prose-invert pre code {
+  background-color: transparent;
+  padding: 0;
+  color: inherit !important;
+}
+
+
+
+
+
+
+/* Fallback styling for WYSIWYG/markdown blog contents (prose-wix light theme equivalent) */
+.prose-wix {
+  color: #1e293b !important;
+}
+
+.prose-wix p {
+  color: #334155 !important;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  line-height: 1.75;
+  font-size: 1rem;
+}
+
+.prose-wix h1,
+.prose-wix h2,
+.prose-wix h3,
+.prose-wix h4 {
+  color: #111111 !important;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.02em;
+}
+
+.prose-wix h1 {
+  font-size: 1.875rem;
+}
+
+.prose-wix h2 {
+  font-size: 1.5rem;
+}
+
+.prose-wix h3 {
+  font-size: 1.25rem;
+}
+
+.prose-wix ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  color: #334155 !important;
+}
+
+.prose-wix ol {
+  list-style-type: decimal;
+  padding-left: 1.5rem;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  color: #334155 !important;
+}
+
+.prose-wix li {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+  color: #334155 !important;
+}
+
+.prose-wix a {
+  color: #c8942a !important;
+  text-decoration: underline;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.prose-wix a:hover {
+  color: #a87820 !important;
+}
+
+.prose-wix blockquote {
+  border-left: 4px solid #c8942a;
+  padding-left: 1.25rem;
+  font-style: italic;
+  color: #475569 !important;
+  background-color: #faf9f6;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  margin: 1.75rem 0;
+  border-radius: 0 4px 4px 0;
+}
+
+.prose-wix hr {
+  border: 0;
+  border-top: 1px solid #e2e8f0;
+  margin: 2.5rem 0;
+}
+
+.prose-wix pre, 
+.prose-wix code {
+  font-family: monospace;
+  background-color: #f1f5f9;
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.25rem;
+  font-size: 0.9em;
+  color: #a87820 !important;
+}
+
+.prose-wix pre {
+  padding: 1.25rem;
+  overflow-x: auto;
+  margin: 1.75rem 0;
+  border: 1px solid #e2e8f0;
+}
+
+.prose-wix pre code {
+  background-color: transparent;
+  padding: 0;
+  color: #1e293b !important;
+}
+
+.prose-wix img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 1.5rem auto;
+  display: block;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+/* Custom Print Configuration to disable default browser header/footer URLs */
+@media print {
+  @page {
+    size: auto;
+    margin: 0mm;
+  }
+  html, body {
+    margin: 0mm !important;
+    padding: 0mm !important;
+    background: #ffffff !important;
+  }
+  .hidden.print\:block {
+    padding: 24mm 24mm !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: 100vh !important;
+    background-color: #ffffff !important;
+  }
+}
+
+
+/* ───────────────────────────────────────────────────────────────
+   Civil At Hand 2026 Experience Layer
+   Consistent, accessible, non-floating UI across the whole site.
+   ─────────────────────────────────────────────────────────────── */
+:root {
+  color-scheme: light;
+  --cah-radius: 14px;
+  --cah-focus: rgba(200, 148, 42, 0.7);
+}
+
+::selection {
+  background: rgba(200, 148, 42, 0.22);
+  color: #0c1a2e;
+}
+
+.skip-link {
+  position: fixed;
+  top: 8px;
+  left: 8px;
+  z-index: 10000;
+  transform: translateY(-180%);
+  border-radius: 10px;
+  background: #0c1a2e;
+  color: #fff;
+  padding: 10px 14px;
+  font-size: 12px;
+  font-weight: 800;
+  box-shadow: 0 10px 30px rgba(12, 26, 46, 0.22);
+}
+
+.skip-link:focus { transform: translateY(0); outline: 2px solid var(--cah-focus); outline-offset: 2px; }
+
+:focus-visible {
+  outline: 2px solid var(--cah-focus);
+  outline-offset: 3px;
+}
+
+button:disabled,
+[aria-disabled="true"] {
+  cursor: not-allowed;
+}
+
+input, textarea, select {
+  accent-color: #c8942a;
+}
+
+img {
+  max-width: 100%;
+}
+
+.prose-wix table,
+.prose-invert table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.prose-wix th, .prose-wix td,
+.prose-invert th, .prose-invert td {
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  padding: 0.7rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.prose-wix th, .prose-invert th {
+  font-weight: 800;
+  background: rgba(200, 148, 42, 0.08);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .wix-btn-solid, .wix-btn-outline {
+    min-height: 44px;
+  }
+}
+
+/* ───────────────────────────────────────────────────────────────
+   Global production hardening + responsive safety
+   These rules are intentionally generic so existing pages/components
+   remain visually consistent while preventing accidental horizontal
+   overflow on phones and long user-generated content from breaking cards.
+   ─────────────────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  min-width: 320px;
+  overflow-x: hidden;
+}
+
+main,
+section,
+article,
+aside,
+header,
+footer,
+nav,
+div {
+  min-width: 0;
+}
+
+img,
+svg,
+video,
+canvas {
+  max-width: 100%;
+}
+
+input,
+textarea,
+select,
+button {
+  max-width: 100%;
+}
+
+input,
+textarea,
+select {
+  min-width: 0;
+}
+
+textarea {
+  overflow-wrap: anywhere;
+}
+
+pre,
+code {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+/* Long emails, project names, URLs and uploaded-file names should never
+   force a mobile card wider than the viewport. */
+.break-anywhere,
+[data-break-anywhere="true"] {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+/* Keep data-heavy tables usable on small screens without changing their
+   desktop layout. Existing explicit overflow wrappers continue to work. */
+.table-responsive {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.table-responsive > table {
+  min-width: 640px;
+}
+
+@media (max-width: 640px) {
+  .table-responsive > table {
+    min-width: 560px;
+  }
+
+  .mobile-full-width {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+
+/* Accessible touch targets for primary controls on small screens. */
+@media (max-width: 640px) {
+  button,
+  [role="button"] {
+    touch-action: manipulation;
+  }
+}
+
+/* ───────────────────────────────────────────────────────────────
+   2026 user-first interface layer
+   Goal: every page should feel like the same calm, understandable
+   product even when the underlying feature set is technically deep.
+   ─────────────────────────────────────────────────────────────── */
+:root {
+  --cah-surface: #ffffff;
+  --cah-surface-soft: #f7f9fc;
+  --cah-ink: #11243c;
+  --cah-ink-soft: #526173;
+  --cah-line: #dfe5ec;
+  --cah-brand: #c8942a;
+  --cah-radius-sm: 10px;
+  --cah-radius-md: 14px;
+  --cah-radius-lg: 20px;
+  --cah-control-height: 44px;
+}
+
+body {
+  background: var(--cah-surface-soft);
+  color: var(--cah-ink);
+  line-height: 1.6;
+}
+
+/* Reduce the visual pressure of very dense utility pages without changing content. */
+main > section,
+main > div > section,
+.cah-page-shell > section {
+  scroll-margin-top: 96px;
+}
+
+/* Consistent readable prose. Existing Tailwind classes remain in control of size. */
+:is(main, article) p { text-wrap: pretty; }
+:is(main, article) h1,
+:is(main, article) h2,
+:is(main, article) h3 { text-wrap: balance; }
+
+/* Make native controls easier for non-technical users across every route. */
+input, textarea, select {
+  min-height: var(--cah-control-height);
+  border-radius: var(--cah-radius-sm);
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:not(:disabled),
+a[href] {
+  cursor: pointer;
+}
+
+/* Shared page framing helpers used by redesigned surfaces. */
+.cah-page-shell {
+  min-height: 100%;
+  background: var(--cah-surface-soft);
+}
+
+.cah-section-heading {
+  max-width: 760px;
+}
+
+.cah-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 999px;
+  background: #fff7e8;
+  border: 1px solid #f3dfb8;
+  color: #8b641e;
+  padding: 0.45rem 0.75rem;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+}
+
+.cah-choice-card {
+  display: flex;
+  min-height: 132px;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid var(--cah-line);
+  border-radius: var(--cah-radius-md);
+  background: var(--cah-surface);
+  padding: 1.1rem;
+  transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.cah-choice-card:hover,
+.cah-choice-card:focus-visible {
+  transform: translateY(-2px);
+  border-color: #c8d1dc;
+  box-shadow: 0 12px 32px rgba(17, 36, 60, 0.08);
+}
+
+.cah-choice-card .cah-choice-icon {
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: #f2f5f8;
+  color: var(--cah-brand);
+}
+
+.cah-plain-label {
+  color: var(--cah-ink);
+  font-weight: 800;
+  font-size: 0.95rem;
+  line-height: 1.25;
+}
+
+.cah-plain-help {
+  color: var(--cah-ink-soft);
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
+/* Avoid auto-animated marquees for users who prefer reduced motion. */
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track,
+  .animate-spin-slow,
+  .animate-float {
+    animation: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  body { font-size: 15px; }
+  .cah-choice-card { min-height: 118px; }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   CIVIL AT HAND — SENIOR DESIGN REFINEMENT LAYER (v2)
+   Purpose: give every page one calm, premium, senior-engineer look
+   without touching page markup or removing any feature.
+   Nothing here changes behaviour — only rhythm, contrast, depth
+   and legibility, sitewide.
+   ═══════════════════════════════════════════════════════════════ */
+
+:root {
+  /* Elevation scale — soft, architectural, never "bubbly" */
+  --cah-shadow-xs: 0 1px 2px rgba(12, 26, 46, 0.05);
+  --cah-shadow-sm: 0 2px 8px rgba(12, 26, 46, 0.06);
+  --cah-shadow-md: 0 10px 28px -12px rgba(12, 26, 46, 0.22);
+  --cah-shadow-lg: 0 26px 60px -28px rgba(12, 26, 46, 0.34);
+
+  /* Typographic rhythm */
+  --cah-lead: 1.65;
+  --cah-track-tight: -0.022em;
+}
+
+@layer base {
+  /* ── 1. Typography: crisper, more editorial, easier to scan ───── */
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: "kern" 1, "liga" 1, "cv11" 1;
+  }
+
+  :where(main, article, section) :where(h1, h2, h3, h4) {
+    font-family: var(--font-display), 'Outfit', sans-serif;
+    letter-spacing: var(--cah-track-tight);
+  }
+
+  :is(main, article) :is(h1) { line-height: 1.08; }
+  :is(main, article) :is(h2) { line-height: 1.16; }
+  :is(main, article) :is(h3) { line-height: 1.25; }
+
+  :is(main, article) p,
+  :is(main, article) li {
+    line-height: var(--cah-lead);
+  }
+
+  /* Numbers in tables, prices, calculators align like an engineer's sheet */
+  table, .tabular, [data-numeric="true"] {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* ── 2. Depth: replace flat/heavy shadows with one coherent scale ─ */
+.shadow-premium { box-shadow: var(--cah-shadow-sm); }
+.shadow-premium-lg { box-shadow: var(--cah-shadow-md); }
+.shadow-orange-glow { box-shadow: 0 10px 26px -12px rgba(200, 148, 42, 0.55); }
+
+.bg-glass {
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: saturate(160%) blur(14px);
+  -webkit-backdrop-filter: saturate(160%) blur(14px);
+  border: 1px solid rgba(12, 26, 46, 0.07);
+}
+
+/* ── 3. Reusable senior-grade primitives (opt-in class names) ──── */
+.cah-container {
+  width: 100%;
+  max-width: 80rem;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+@media (min-width: 640px) { .cah-container { padding-inline: 1.5rem; } }
+@media (min-width: 1024px) { .cah-container { padding-inline: 2rem; } }
+
+.cah-section { padding-block: clamp(3rem, 6vw, 6rem); }
+.cah-section-tight { padding-block: clamp(2rem, 4vw, 3.5rem); }
+
+.cah-title {
+  font-family: var(--font-display), 'Outfit', sans-serif;
+  font-weight: 800;
+  letter-spacing: var(--cah-track-tight);
+  font-size: clamp(1.75rem, 3.4vw, 2.9rem);
+  line-height: 1.1;
+  color: var(--cah-ink);
+}
+
+.cah-subtitle {
+  color: var(--cah-ink-soft);
+  font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+  line-height: 1.7;
+  max-width: 62ch;
+}
+
+.cah-card {
+  background: var(--cah-surface);
+  border: 1px solid var(--cah-line);
+  border-radius: var(--cah-radius-lg);
+  box-shadow: var(--cah-shadow-xs);
+  transition: transform 200ms cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 200ms cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 200ms ease;
+}
+.cah-card:hover {
+  transform: translateY(-3px);
+  border-color: #ccd6e2;
+  box-shadow: var(--cah-shadow-md);
+}
+
+.cah-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: var(--cah-control-height);
+  padding: 0.7rem 1.25rem;
+  border-radius: 999px;
+  font-weight: 800;
+  font-size: 0.82rem;
+  letter-spacing: 0.01em;
+  border: 1px solid transparent;
+  transition: all 200ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.cah-btn-primary {
+  background: linear-gradient(180deg, #d4a03a 0%, #c8942a 100%);
+  color: #16233a;
+  box-shadow: 0 10px 24px -14px rgba(200, 148, 42, 0.9);
+}
+.cah-btn-primary:hover { filter: brightness(1.05); transform: translateY(-1px); }
+.cah-btn-dark { background: var(--cah-ink); color: #fff; }
+.cah-btn-dark:hover { background: #1b3457; }
+.cah-btn-ghost {
+  background: #fff;
+  color: var(--cah-ink);
+  border-color: var(--cah-line);
+}
+.cah-btn-ghost:hover { border-color: #b9c5d4; background: #f7f9fc; }
+
+/* ── 4. Forms: one consistent, obvious, layman-friendly control ── */
+@layer base {
+  /* :where() keeps specificity at 0 so any existing Tailwind class on a
+     field still wins — this is only a sensible default, never an override. */
+  :where(input:not([type="checkbox"]):not([type="radio"]):not([type="range"])),
+  :where(textarea),
+  :where(select) {
+    border: 1px solid var(--cah-line);
+    background: #fff;
+    color: var(--cah-ink);
+    padding: 0.65rem 0.85rem;
+    font-size: 0.92rem;
+    transition: border-color 160ms ease, box-shadow 160ms ease;
+  }
+
+  :where(input:not([type="checkbox"]):not([type="radio"])):focus,
+  :where(textarea):focus,
+  :where(select):focus {
+    outline: none;
+    border-color: var(--cah-brand);
+    box-shadow: 0 0 0 4px rgba(200, 148, 42, 0.16);
+  }
+
+  :where(input, textarea)::placeholder { color: #93a2b4; }
+}
+
+/* ── 5. Links & focus: visible, calm, WCAG-friendly ────────────── */
+:focus-visible {
+  outline: 2px solid var(--cah-brand);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* ── 6. Motion: subtle entrance used by redesigned surfaces ────── */
+@keyframes cah-rise {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: none; }
+}
+.cah-rise { animation: cah-rise 520ms cubic-bezier(0.16, 1, 0.3, 1) both; }
+
+@media (prefers-reduced-motion: reduce) {
+  .cah-rise { animation: none !important; }
+  .cah-card:hover { transform: none; }
+}
+
+/* ── 7. Section dividers that read like a technical sheet ──────── */
+.cah-rule {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--cah-line) 12%, var(--cah-line) 88%, transparent);
+  border: 0;
+}
+
+/* ── 8. Print: clean documents for invoices/proposals/receipts ─── */
+@media print {
+  header, footer, nav, .no-print { display: none !important; }
+  body { background: #fff !important; color: #000 !important; }
+  .cah-card { box-shadow: none !important; border: 1px solid #ccc !important; }
+}
+
+/* Blog publishing system — editorial reading and authoring quality */
+.prose-editor h2,
+.prose-editor h3,
+.prose-editor h4 {
+  font-family: var(--font-display), 'Outfit', sans-serif;
+  color: #0f172a;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+.prose-editor h2 { font-size: clamp(1.25rem, 2vw, 1.65rem); margin: 1.75rem 0 .65rem; }
+.prose-editor h3 { font-size: clamp(1.08rem, 1.7vw, 1.3rem); margin: 1.35rem 0 .55rem; }
+.prose-editor p { margin: .9rem 0; line-height: 1.8; }
+.prose-editor li { margin: .4rem 0; line-height: 1.7; }
+.prose-editor blockquote { border-left: 3px solid #c8942a; background: #fffaf0; padding: .8rem 1rem; border-radius: 0 .75rem .75rem 0; margin: 1rem 0; }
+.prose-editor img { max-width: 100%; height: auto; border-radius: .75rem; }
+.prose-editor pre { overflow-x: auto; max-width: 100%; }
+.blog-article-body { overflow-wrap: anywhere; word-break: normal; white-space: normal; word-spacing: normal; letter-spacing: normal; }
+.blog-article-body p, .blog-article-body li, .blog-article-body td, .blog-article-body th { white-space: normal; overflow-wrap: anywhere; }
+.blog-article-body p { margin-block: 1rem; }
+.blog-article-body h2, .blog-article-body h3 { text-wrap: balance; }
+.blog-article-body h2 { scroll-margin-top: 100px; font-size: clamp(1.45rem, 3vw, 2.15rem); margin-top: 2.5rem; }
+.blog-article-body h3 { scroll-margin-top: 100px; font-size: clamp(1.15rem, 2.4vw, 1.55rem); margin-top: 2rem; }
+.blog-article-body p { font-size: clamp(1rem, 1.4vw, 1.075rem); line-height: 1.9; color: #334155; }
+.blog-article-body strong { color: #172033; font-weight: 800; }
+.blog-article-body ul, .blog-article-body ol { padding-left: 1.35rem; }
+.blog-article-body table { display: block; overflow-x: auto; white-space: nowrap; }
+.blog-article-body img { max-width: 100%; height: auto; }
+
+@media (max-width: 640px) {
+  .blog-article-body p { line-height: 1.82; }
+  .blog-article-body h2 { margin-top: 2rem; }
+  .blog-article-body blockquote { margin-left: 0; margin-right: 0; }
+}
+
+/* ── Executive engineering design language ─────────────────────── */
+.cah-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  color: #a87820;
+  font-size: 10px;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+.cah-eyebrow::before {
+  content: "";
+  width: 24px;
+  height: 1px;
+  background: #c8942a;
+}
+.cah-page-shell {
+  min-height: 100vh;
+}
+.cah-section-rule {
+  border-top: 1px solid #dde3ed;
+}
+.cah-technical-label {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 9px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: #64748b;
+}
+
+/* Civil At Hand navigation + footer safety layer */
+html {
+  scroll-padding-top: 76px;
+}
+body {
+  overflow-x: hidden;
+}
+@media (max-width: 1023px) {
+  html { scroll-padding-top: 64px; }
+}
+.cah-footer a,
+.cah-footer button { -webkit-tap-highlight-color: transparent; }
+.cah-footer { padding-bottom: env(safe-area-inset-bottom, 0px); }
