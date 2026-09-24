@@ -57,7 +57,25 @@ function getClientPromise(): Promise<MongoClient> {
   return globalMongo.__cahMongoClientPromise;
 }
 
-// Keep the default export compatible with all existing API routes.
-const clientPromise = getClientPromise();
-clientPromise.catch(() => undefined);
-export default clientPromise;
+// Lazy, promise-like export: nothing connects (and nothing throws) when the
+// module is imported, e.g. during `next build`. The connection is attempted
+// only when a route actually awaits it. If MONGODB_URI is missing, awaiting
+// rejects and existing try/catch blocks handle it as before.
+const lazyClientPromise = {
+  then<T1 = MongoClient, T2 = never>(
+    onFulfilled?: ((value: MongoClient) => T1 | PromiseLike<T1>) | null,
+    onRejected?: ((reason: unknown) => T2 | PromiseLike<T2>) | null
+  ): Promise<T1 | T2> {
+    return getClientPromise().then(onFulfilled, onRejected);
+  },
+  catch<T = never>(
+    onRejected?: ((reason: unknown) => T | PromiseLike<T>) | null
+  ): Promise<MongoClient | T> {
+    return getClientPromise().catch(onRejected);
+  },
+  finally(onFinally?: (() => void) | null): Promise<MongoClient> {
+    return getClientPromise().finally(onFinally);
+  },
+} as unknown as Promise<MongoClient>;
+
+export default lazyClientPromise;

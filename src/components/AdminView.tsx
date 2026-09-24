@@ -346,11 +346,6 @@ export const AdminView: React.FC = () => {
       { id: "portfolio", title: "Portfolio Management", short: "Portfolio", icon: Briefcase },
       { id: "careers", title: "Career Applications", short: "Careers", icon: Briefcase },
     ]},
-    { label: "Education Platform", items: [
-      { id: "softwareCourses", title: "Software Courses", short: "Courses", icon: Laptop },
-      { id: "studyMaterials", title: "Study Materials Library", short: "Materials", icon: BookOpen },
-      { id: "mentorship", title: "Mentorship Panel", short: "Mentorship", icon: GraduationCap },
-    ]},
     { label: "Website Control", items: [
       { id: "websiteContent", title: "Website Pages & CMS", short: "Website", icon: Globe2 },
       { id: "websiteNavigation", title: "Website Navigation", short: "Navigation", icon: Navigation2 },

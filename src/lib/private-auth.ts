@@ -24,8 +24,13 @@ if (!PASSWORD && process.env.NODE_ENV === "production") {
   );
 }
 
+const FALLBACK_SECRET =
+  process.env.NODE_ENV === "production"
+    ? crypto.randomBytes(32).toString("hex")
+    : "dev-only-insecure-secret-do-not-use-in-prod";
+
 function resolvedSecret(): string {
-  return SECRET || "dev-only-insecure-secret-do-not-use-in-prod";
+  return SECRET || FALLBACK_SECRET;
 }
 
 function sign(data: string): string {

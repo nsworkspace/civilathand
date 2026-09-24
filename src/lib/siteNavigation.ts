@@ -5,7 +5,6 @@ export type SiteNavItem = {
 };
 export type SiteNavigation = { items: SiteNavItem[]; updatedAt?: string };
 export const DEFAULT_SITE_NAV: SiteNavItem[] = [
-  { id: "learn", label: "Learn", href: "/education", help: "Courses, study materials and mentorship", icon: "GraduationCap", visible: true },
   { id: "tools", label: "Tools", href: "/calculators", help: "Engineering calculators and technical utilities", icon: "Calculator", visible: true },
   { id: "careers", label: "Careers", href: "/work-with-us", help: "Jobs and professional opportunities", icon: "BriefcaseBusiness", visible: true },
   { id: "case-studies", label: "Case studies", href: "/portfolio", help: "Projects and engineering examples", icon: "Layers3", visible: true },

@@ -9,14 +9,18 @@ import clientPromise from "@/lib/mongodb";
 const SECRET = process.env.NEXTAUTH_SECRET;
 
 if (!SECRET && process.env.NODE_ENV === "production") {
-  // Fail loudly in production instead of silently signing tokens with a
-  // predictable/undefined secret.
-  throw new Error(
-    "NEXTAUTH_SECRET environment variable is not set. Refusing to start in production without it."
-  );
+  // Do not crash the build/start when the secret is not configured yet.
+  // A random per-process secret is used instead, so nobody can forge a
+  // session token. Sessions simply will not survive a restart until
+  // NEXTAUTH_SECRET is added in the hosting environment.
+  console.warn("NEXTAUTH_SECRET is not set. Using a temporary random secret.");
 }
 
-const RESOLVED_SECRET = SECRET || "dev-only-insecure-secret-do-not-use-in-prod";
+const RESOLVED_SECRET =
+  SECRET ||
+  (process.env.NODE_ENV === "production"
+    ? crypto.randomBytes(32).toString("hex")
+    : "dev-only-insecure-secret-do-not-use-in-prod");
 
 // ─────────────────────────────────────────────────────────────────────
 // Admin permission system

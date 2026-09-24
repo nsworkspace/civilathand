@@ -11,8 +11,8 @@ const BASE_URL = SITE.url.replace(/\/$/, "");
 const PUBLIC_ROUTES = [
   "/", "/about", "/portfolio", "/blog", "/contact", "/faq", "/talk", "/gallery", "/links",
   "/accessibility-statement", "/cookie-policy", "/privacy-policy", "/terms-and-conditions",
-  "/engineering-disclaimer", "/education", "/education/courses", "/education/study-materials",
-  "/mentorship", "/community", "/calculators", "/engineering-unit-converter",
+  "/engineering-disclaimer",
+  "/community", "/calculators", "/engineering-unit-converter",
   "/engineering-unit-converters/concrete", "/work-with-us",
 ];
 
