@@ -1,111 +1,53 @@
 import type { Metadata } from "next";
-import type { LucideIcon } from "lucide-react";
-import Link from "next/link";
-import { ArrowRight, BookOpen, Calculator, BriefcaseBusiness, GraduationCap, UsersRound } from "lucide-react";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
+import PageHero from "@/components/PageHero";
+import { site, stats } from "@/data/site";
 
-export const metadata: Metadata = {
-  title: "About Civil At Hand",
-  description:
-    "Civil At Hand is a practical civil engineering and architecture learning platform for students, professionals and job seekers.",
-};
+export const metadata: Metadata = { title: "About Us" };
 
-const pillars: Array<{ title: string; description: string; icon: LucideIcon }> = [
-  {
-    title: "Learn",
-    description:
-      "Structured courses and study resources that make difficult civil and architecture topics easier to understand.",
-    icon: GraduationCap,
-  },
-  {
-    title: "Practice",
-    description:
-      "Engineering calculators, examples and practical workflows that connect theory with real work.",
-    icon: Calculator,
-  },
-  {
-    title: "Grow",
-    description:
-      "Mentorship, career guidance and industry knowledge for the next stage of your professional journey.",
-    icon: UsersRound,
-  },
-  {
-    title: "Connect",
-    description:
-      "Jobs, case studies and a growing knowledge network for people across the built environment.",
-    icon: BriefcaseBusiness,
-  },
+const values = [
+  { t: "Safety First", d: "Every design and site activity follows applicable IS codes and safe practices." },
+  { t: "Quality Work", d: "Tested materials, skilled crews and strict supervision at every stage." },
+  { t: "On-Time Delivery", d: "Clear schedules, regular updates and no surprises on cost." },
+  { t: "Client Focus", d: "We listen first, then design solutions that fit your needs and budget." },
 ];
 
-export default function AboutPage() {
+export default function About() {
   return (
-    <div className="min-h-screen bg-white text-slate-950">
-      <Header />
-      <main id="main-content">
-        <section className="bg-[#07111f] text-white">
-          <div className="mx-auto max-w-7xl px-5 py-20 sm:px-7 lg:px-8 lg:py-28">
-            <p className="text-xs font-black uppercase tracking-[.18em] text-orange-400">About Civil At Hand</p>
-            <h1 className="mt-5 max-w-4xl font-display text-4xl font-black tracking-tight sm:text-6xl">
-              A practical home for the civil and architecture community.
-            </h1>
-            <p className="mt-6 max-w-3xl text-base leading-8 text-slate-300 sm:text-lg">
-              Civil At Hand is being built as a universal learning and career platform —
-              not just for students, and not just for one job role. The goal is to help
-              people understand the profession, build useful skills and keep progressing.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Link href="/education" className="inline-flex items-center gap-2 rounded-xl bg-orange-500 px-5 py-3 text-sm font-bold">
-                Explore learning <ArrowRight className="h-4 w-4" />
-              </Link>
-              <Link href="/work-with-us" className="inline-flex items-center gap-2 rounded-xl border border-white/15 px-5 py-3 text-sm font-bold">
-                Explore careers
-              </Link>
+    <>
+      <PageHero title="About NS Infra" subtitle="Civil engineers and architects building with precision and integrity." />
+      <section className="mx-auto grid max-w-6xl gap-12 px-5 py-20 md:grid-cols-2">
+        <div>
+          <h2 className="font-display text-3xl font-bold text-navy-950">Who we are</h2>
+          <p className="mt-5 leading-relaxed text-slate-600">
+            {site.name} is a civil engineering and architecture firm offering complete solutions under one roof: from concept design and
+            structural engineering to estimation, construction and project management.
+          </p>
+          <p className="mt-4 leading-relaxed text-slate-600">
+            Our team combines technical expertise with practical site experience, so every project is buildable, economical and durable.
+          </p>
+        </div>
+        <div className="grid grid-cols-2 gap-4">
+          {stats.map((s) => (
+            <div key={s.label} className="rounded-2xl bg-navy-950 p-6 text-center text-white">
+              <div className="font-display text-3xl font-bold text-gold-400">{s.value}</div>
+              <div className="mt-1 text-sm text-slate-300">{s.label}</div>
             </div>
-          </div>
-        </section>
-
-        <section className="mx-auto max-w-7xl px-5 py-20 sm:px-7 lg:px-8">
-          <div className="grid gap-4 md:grid-cols-2">
-            {pillars.map(({ title, description, icon: Icon }) => (
-              <div key={title} className="rounded-3xl border border-slate-200 bg-slate-50 p-7">
-                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-white text-orange-600 shadow-sm">
-                  <Icon className="h-5 w-5" />
-                </div>
-                <h2 className="mt-6 font-display text-2xl font-black">{title}</h2>
-                <p className="mt-3 max-w-xl text-sm leading-7 text-slate-600">{description}</p>
+          ))}
+        </div>
+      </section>
+      <section className="bg-slate-100 py-20">
+        <div className="mx-auto max-w-6xl px-5">
+          <h2 className="mb-10 text-center font-display text-3xl font-bold text-navy-950">Our Values</h2>
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {values.map((v) => (
+              <div key={v.t} className="rounded-2xl bg-white p-6 shadow-sm">
+                <h3 className="mb-2 font-bold text-navy-950">{v.t}</h3>
+                <p className="text-sm leading-relaxed text-slate-600">{v.d}</p>
               </div>
             ))}
           </div>
-        </section>
-
-        <section className="border-y border-slate-200 bg-white">
-          <div className="mx-auto grid max-w-7xl gap-10 px-5 py-20 sm:px-7 lg:grid-cols-[.8fr_1.2fr] lg:px-8">
-            <div>
-              <p className="text-xs font-black uppercase tracking-[.18em] text-orange-600">Who it is for</p>
-              <h2 className="mt-3 font-display text-3xl font-black">One platform across the professional journey.</h2>
-            </div>
-            <div className="grid gap-4 sm:grid-cols-2">
-              {[
-                "Civil engineering students",
-                "Architecture students",
-                "Fresh graduates",
-                "Site and QA/QC professionals",
-                "Design and BIM professionals",
-                "Quantity surveyors",
-                "Construction professionals",
-                "Job seekers and career switchers",
-              ].map((item) => (
-                <div key={item} className="flex items-center gap-3 rounded-xl border border-slate-200 p-4 text-sm font-semibold">
-                  <BookOpen className="h-4 w-4 shrink-0 text-orange-500" />
-                  {item}
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-      </main>
-      <Footer />
-    </div>
+        </div>
+      </section>
+    </>
   );
 }

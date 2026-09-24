@@ -1,23 +1,14 @@
 {
-  "name": "civil-at-hand",
-  "version": "0.1.0",
+  "name": "ns-infra",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "eslint src/"
+    "start": "next start"
   },
   "dependencies": {
-    "@types/nodemailer": "^8.0.1",
-    "firebase": "^11.10.0",
-    "framer-motion": "^12.40.0",
-    "jspdf": "^4.2.1",
-    "jspdf-autotable": "^5.0.8",
-    "lucide-react": "^1.17.0",
-    "mongodb": "^7.2.0",
     "next": "^16.3.0",
-    "nodemailer": "^9.0.5",
     "react": "19.2.4",
     "react-dom": "19.2.4"
   },
@@ -26,8 +17,6 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "16.2.7",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
