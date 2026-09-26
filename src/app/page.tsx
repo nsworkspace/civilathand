@@ -212,7 +212,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="border-b border-slate-200 bg-white py-20 md:py-24" id="why-civil-at-hand">
+        <section className="border-b border-slate-200 bg-white py-20 md:py-24" id="why-ns-construction">
           <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[1.1fr_.9fr] lg:px-8">
             <div>
               <span className="text-[10px] font-extrabold uppercase tracking-[0.2em] text-orange-600">Why NS Construction</span>

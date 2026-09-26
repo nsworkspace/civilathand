@@ -114,28 +114,6 @@ const categories = [
     ],
   },
   {
-    label: "Education — CAH Education",
-    color: "bg-emerald-600",
-    faqs: [
-      {
-        q: "What is NS Construction Education?",
-        a: "NS Construction Education is our dedicated learning platform for civil engineering students and professionals, focused on 1-on-1 mentorship and practical software courses with industry-oriented guidance."
-      },
-      {
-        q: "How does the 1-on-1 mentorship work?",
-        a: "You select a mentor based on your goal (GATE preparation, career guidance, job interview prep, M.Tech admission, etc.) and book a 45-minute video session. The mentor sends you a pre-session questionnaire so your time is used effectively.",
-      },
-      {
-        q: "Will payment and enrollment be available online?",
-        a: "Yes. Education products can be enrolled online through the website using the available payment methods, subject to the product configuration shown at checkout.",
-      },
-      {
-        q: "Are the software courses suitable for beginners?",
-        a: "Yes. Our upcoming courses on AutoCAD, Revit, STAAD Pro, ETABS, and MS Project are designed for beginners to intermediate learners. Each course starts from the basics and builds up to real project workflows used in the industry.",
-      },
-    ],
-  },
-  {
     label: "AI & Search Visibility",
     color: "bg-violet-600",
     faqs: AI_FAQS.map((item) => ({ q: item.q, a: item.a })),

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import type { LucideIcon } from "lucide-react";
 import Link from "next/link";
-import { ArrowRight, BookOpen, Calculator, BriefcaseBusiness, GraduationCap, UsersRound } from "lucide-react";
+import { ArrowRight, ClipboardCheck, HardHat, Building2, ShieldCheck, Factory, Landmark, Hammer, Warehouse } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
@@ -13,28 +13,28 @@ export const metadata: Metadata = {
 
 const pillars: Array<{ title: string; description: string; icon: LucideIcon }> = [
   {
-    title: "Learn",
+    title: "Plan",
     description:
-      "Structured courses and study resources that make difficult civil and architecture topics easier to understand.",
-    icon: GraduationCap,
+      "Site assessment, budgeting and scheduling so every project starts with a clear, realistic plan.",
+    icon: ClipboardCheck,
   },
   {
-    title: "Practice",
+    title: "Design & Engineer",
     description:
-      "Engineering calculators, examples and practical workflows that connect theory with real work.",
-    icon: Calculator,
+      "Structural, architectural and technical drawings that are accurate, buildable and code-compliant.",
+    icon: Building2,
   },
   {
-    title: "Grow",
+    title: "Build",
     description:
-      "Mentorship, career guidance and industry knowledge for the next stage of your professional journey.",
-    icon: UsersRound,
+      "On-site execution with quality materials, skilled crews and consistent supervision at every stage.",
+    icon: HardHat,
   },
   {
-    title: "Connect",
+    title: "Deliver & Support",
     description:
-      "Jobs, case studies and a growing knowledge network for people across the built environment.",
-    icon: BriefcaseBusiness,
+      "Clean handover, documentation and after-project support — we don't disappear once the work is done.",
+    icon: ShieldCheck,
   },
 ];
 
@@ -66,7 +66,11 @@ export default function AboutPage() {
         </section>
 
         <section className="mx-auto max-w-7xl px-5 py-20 sm:px-7 lg:px-8">
-          <div className="grid gap-4 md:grid-cols-2">
+          <div className="mx-auto max-w-3xl text-center">
+            <span className="text-[10px] font-extrabold uppercase tracking-[0.2em] text-orange-600">How we work</span>
+            <h2 className="mt-3 font-display text-3xl font-extrabold tracking-tight sm:text-4xl">From first site visit to final handover.</h2>
+          </div>
+          <div className="mt-10 grid gap-4 md:grid-cols-2">
             {pillars.map(({ title, description, icon: Icon }) => (
               <div key={title} className="rounded-3xl border border-slate-200 bg-slate-50 p-7">
                 <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-white text-orange-600 shadow-sm">
@@ -82,25 +86,28 @@ export default function AboutPage() {
         <section className="border-y border-slate-200 bg-white">
           <div className="mx-auto grid max-w-7xl gap-10 px-5 py-20 sm:px-7 lg:grid-cols-[.8fr_1.2fr] lg:px-8">
             <div>
-              <p className="text-xs font-black uppercase tracking-[.18em] text-orange-600">Who it is for</p>
-              <h2 className="mt-3 font-display text-3xl font-black">One platform across the professional journey.</h2>
+              <p className="text-xs font-black uppercase tracking-[.18em] text-orange-600">Who we work with</p>
+              <h2 className="mt-3 font-display text-3xl font-black">Construction partners across every sector.</h2>
             </div>
             <div className="grid gap-4 sm:grid-cols-2">
               {[
-                "Civil engineering students",
-                "Architecture students",
-                "Fresh graduates",
-                "Site and QA/QC professionals",
-                "Design and BIM professionals",
-                "Quantity surveyors",
-                "Construction professionals",
-                "Job seekers and career switchers",
-              ].map((item) => (
-                <div key={item} className="flex items-center gap-3 rounded-xl border border-slate-200 p-4 text-sm font-semibold">
-                  <BookOpen className="h-4 w-4 shrink-0 text-orange-500" />
-                  {item}
-                </div>
-              ))}
+                ["Homeowners & residential projects", HardHat],
+                ["Real estate developers", Building2],
+                ["Commercial & retail clients", Warehouse],
+                ["Industrial & warehousing", Factory],
+                ["Architects & design consultants", ClipboardCheck],
+                ["Government & infrastructure projects", Landmark],
+                ["Renovation & remodeling", Hammer],
+                ["Facility & project management", ShieldCheck],
+              ].map(([item, Icon]) => {
+                const ItemIcon = Icon as LucideIcon;
+                return (
+                  <div key={item as string} className="flex items-center gap-3 rounded-xl border border-slate-200 p-4 text-sm font-semibold">
+                    <ItemIcon className="h-4 w-4 shrink-0 text-orange-500" />
+                    {item as string}
+                  </div>
+                );
+              })}
             </div>
           </div>
         </section>

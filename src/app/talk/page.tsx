@@ -74,7 +74,7 @@ function linkify(text: string): React.ReactNode[] {
 function AdminAvatar() {
   return (
     <div className="w-8 h-8 rounded-full flex-shrink-0 overflow-hidden ring-2 ring-[#c8942a]/30 shadow">
-      <img src="/logo.jpg" alt="CAH" className="w-full h-full object-cover"
+      <img src="/logo.jpg" alt="NS Construction" className="w-full h-full object-cover"
         onError={e => {
           const el = e.target as HTMLImageElement;
           el.style.display = "none";
@@ -511,7 +511,7 @@ export default function TalkPage() {
 
         <div className="relative flex-shrink-0">
           <div className="w-10 h-10 rounded-xl overflow-hidden ring-2 ring-[#c8942a]/40 shadow">
-            <img src="/logo.jpg" alt="CAH" className="w-full h-full object-cover" />
+            <img src="/logo.jpg" alt="NS Construction" className="w-full h-full object-cover" />
           </div>
           <span className={`absolute -bottom-0.5 -right-0.5 w-3 h-3 rounded-full border-2 border-[#0a1628] ${isOnline ? "bg-emerald-400" : "bg-slate-400"}`} />
         </div>
@@ -574,7 +574,7 @@ export default function TalkPage() {
           <div className="flex flex-col items-center justify-center h-full gap-4 text-center px-6">
             <motion.div initial={{ scale: 0.8, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ duration: 0.4 }}
               className="w-20 h-20 rounded-2xl overflow-hidden shadow-2xl ring-4 ring-[#c8942a]/20">
-              <img src="/logo.jpg" alt="CAH" className="w-full h-full object-cover" />
+              <img src="/logo.jpg" alt="NS Construction" className="w-full h-full object-cover" />
             </motion.div>
             <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.15 }}
               className="bg-white rounded-2xl px-6 py-4 shadow border border-slate-100 max-w-xs">
