@@ -1,4 +1,4 @@
-// Civil At Hand — Service Worker
+// NS Construction — Service Worker
 // Strategy:
 //  - App shell / offline fallback page is precached on install.
 //  - Static assets (Next build output, icons, images, fonts) use a

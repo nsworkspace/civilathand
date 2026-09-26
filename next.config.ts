@@ -101,14 +101,18 @@ const nextConfig: NextConfig = {
 
   async redirects() {
     return [
-      { source: "/tools", destination: "/calculators", permanent: true },
-      // Canonical SEO calculator URLs. Old URLs permanently redirect so
-      // bookmarks and search-engine links do not become 404s.
-      { source: "/calculator", destination: "/engineering-unit-converter", permanent: true },
-      { source: "/calculator/:conversion", destination: "/engineering-unit-converter/:conversion", permanent: true },
-      { source: "/calculators/concrete", destination: "/concrete-calculator", permanent: true },
-      { source: "/calculator/all-calculators", destination: "/calculators", permanent: true },
-      { source: "/calculator/all-calculators/:path*", destination: "/calculators", permanent: true },
+      // The engineering-tools/calculators and education sections were removed.
+      // Old bookmarks and search-engine links redirect to Services instead of 404-ing.
+      { source: "/tools", destination: "/services", permanent: true },
+      { source: "/calculator", destination: "/services", permanent: true },
+      { source: "/calculator/:path*", destination: "/services", permanent: true },
+      { source: "/calculators", destination: "/services", permanent: true },
+      { source: "/calculators/:path*", destination: "/services", permanent: true },
+      { source: "/education", destination: "/services", permanent: true },
+      { source: "/education/:path*", destination: "/services", permanent: true },
+      { source: "/insights", destination: "/blog", permanent: true },
+      { source: "/ai-insights", destination: "/blog", permanent: true },
+      { source: "/ai-insights/:path*", destination: "/blog", permanent: true },
     ];
   },
 

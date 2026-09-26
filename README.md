@@ -1,7 +1,7 @@
-# Civil At Hand — Complete Engineering Handoff README
+# NS Construction — Complete Engineering Handoff README
 
 > **Document type:** Full project handoff / technical master README  
-> **Project:** Civil At Hand  
+> **Project:** NS Construction  
 > **Production domain configured in source:** `https://civilathan.in`  
 > **Application type:** Full-stack engineering consultancy, content, education, customer portal, payment, vendor, and administration platform  
 > **Framework:** Next.js App Router + React + TypeScript  
@@ -91,11 +91,11 @@
 
 ## 1.1 Product name
 
-**Civil At Hand**
+**NS Construction**
 
 ## 1.2 Legal/business identity represented in the application
 
-**Civil At Hand — Design & Consultancy**
+**NS Construction — Design & Consultancy**
 
 ## 1.3 Core positioning
 
@@ -132,7 +132,7 @@ src/data/site.ts
 
 # 2. WHAT THE PRODUCT ACTUALLY IS
 
-Civil At Hand is a multi-domain application.
+NS Construction is a multi-domain application.
 
 It should be understood as the combination of:
 
@@ -3727,7 +3727,7 @@ Before a production feature is considered complete:
 
 # 123. MASTER DEVELOPER MENTAL MODEL
 
-The easiest way to understand Civil At Hand is:
+The easiest way to understand NS Construction is:
 
 ```text
                  CONTENT + ENGINEERING TOOLS
@@ -3858,7 +3858,7 @@ SEO redirects
 
 # 125. FINAL HANDOFF STATEMENT
 
-Civil At Hand is a full-stack engineering consultancy platform with public content, technical tools, education, customer accounts, project workflows, financial transactions, vendor operations, support, and a granular administration system.
+NS Construction is a full-stack engineering consultancy platform with public content, technical tools, education, customer accounts, project workflows, financial transactions, vendor operations, support, and a granular administration system.
 
 A developer taking ownership should **not** treat individual pages as isolated features.
 
@@ -4001,4 +4001,4 @@ TRUST
 
 # END OF MASTER README
 
-**This document is the intended developer handoff reference for the Civil At Hand project.**
+**This document is the intended developer handoff reference for the NS Construction project.**
