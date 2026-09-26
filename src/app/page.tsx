@@ -103,7 +103,7 @@ export default function Home() {
                 <span className="mt-2 block text-orange-500">made simple for everyone</span>
               </h1>
               <p className="mt-6 max-w-2xl border-l-2 border-orange-500/50 pl-4 text-sm leading-7 text-slate-300 sm:text-base">
-                Whether you are planning a building, checking a drawing, estimating a project or looking for the right engineering support, Civil At Hand helps you move from the first question to a clear next step.
+                Whether you are planning a building, checking a drawing, estimating a project or looking for the right engineering support, NS Construction helps you move from the first question to a clear next step.
               </p>
 
               <div className="mt-8 flex flex-wrap gap-3">
@@ -215,7 +215,7 @@ export default function Home() {
         <section className="border-b border-slate-200 bg-white py-20 md:py-24" id="why-civil-at-hand">
           <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[1.1fr_.9fr] lg:px-8">
             <div>
-              <span className="text-[10px] font-extrabold uppercase tracking-[0.2em] text-orange-600">Why Civil At Hand</span>
+              <span className="text-[10px] font-extrabold uppercase tracking-[0.2em] text-orange-600">Why NS Construction</span>
               <h2 className="mt-3 font-display text-3xl font-extrabold tracking-tight sm:text-4xl">Engineering should be easier to understand and act on.</h2>
               <p className="mt-5 max-w-3xl text-sm leading-7 text-slate-600 sm:text-base">We turn drawings, requirements, technical decisions and project questions into practical scope, clear deliverables and a direct route to the service you actually need.</p>
               <div className="mt-8 grid gap-3 sm:grid-cols-3">

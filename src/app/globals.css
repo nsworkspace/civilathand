@@ -46,7 +46,7 @@ body {
   overflow-x: hidden;
 }
 
-/* === Signature Blueprint / Drafting-table Motifs (Civil At Hand identity) === */
+/* === Signature Blueprint / Drafting-table Motifs (NS Construction identity) === */
 
 /* Fine engineering grid — evokes a drafting sheet / structural drawing, not a generic SaaS gradient */
 .blueprint-grid {
@@ -521,7 +521,7 @@ a, button, select, input, textarea, label, svg {
 
 
 /* ───────────────────────────────────────────────────────────────
-   Civil At Hand 2026 Experience Layer
+   NS Construction 2026 Experience Layer
    Consistent, accessible, non-floating UI across the whole site.
    ─────────────────────────────────────────────────────────────── */
 :root {
@@ -1102,7 +1102,7 @@ a[href] {
   color: #64748b;
 }
 
-/* Civil At Hand navigation + footer safety layer */
+/* NS Construction navigation + footer safety layer */
 html {
   scroll-padding-top: 76px;
 }

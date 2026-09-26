@@ -4,8 +4,8 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Civil At Hand",
-  description: "Read the Privacy Policy of Civil At Hand to understand how we collect, use, safeguard, and disclose your personal information in connection with our civil engineering and architectural services.",
+  title: "Privacy Policy | NS Construction",
+  description: "Read the Privacy Policy of NS Construction to understand how we collect, use, safeguard, and disclose your personal information in connection with our civil engineering and architectural services.",
 };
 
 export default function PrivacyPolicyPage() {
@@ -23,7 +23,7 @@ export default function PrivacyPolicyPage() {
               Privacy Policy
             </h1>
             <div className="mt-4 flex items-center justify-center gap-3 text-xs font-medium text-slate-400">
-              <span>Civil At Hand</span>
+              <span>NS Construction</span>
               <span>•</span>
               <span>civilathan.in</span>
               <span>•</span>
@@ -43,7 +43,7 @@ export default function PrivacyPolicyPage() {
                   <span className="text-orange-500 font-black">1.</span> Introduction
                 </h2>
                 <p>
-                  Welcome to <strong>Civil At Hand</strong> ("we," "us," or "our"), a sole proprietorship owned and operated by <strong>Nikhil</strong>, based in Haryana, India. We operate the website <a href="https://civilathan.in" className="text-orange-600 hover:text-orange-700 underline font-semibold">civilathan.in</a> and provide comprehensive civil engineering and architectural services – including design, consultancy, and construction support – both online and on‑site. We are committed to protecting your personal information and your right to privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or engage our services. Please read this policy carefully. If you disagree with its terms, please discontinue use of our website and services.
+                  Welcome to <strong>NS Construction</strong> ("we," "us," or "our"), a sole proprietorship owned and operated by <strong>Nikhil</strong>, based in Haryana, India. We operate the website <a href="https://civilathan.in" className="text-orange-600 hover:text-orange-700 underline font-semibold">civilathan.in</a> and provide comprehensive civil engineering and architectural services – including design, consultancy, and construction support – both online and on‑site. We are committed to protecting your personal information and your right to privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or engage our services. Please read this policy carefully. If you disagree with its terms, please discontinue use of our website and services.
                 </p>
               </div>
 
@@ -236,7 +236,7 @@ export default function PrivacyPolicyPage() {
                 </h2>
                 <div className="space-y-1 text-slate-600 font-medium">
                   <p>
-                    <strong>Civil At Hand</strong> (Nikhil)
+                    <strong>NS Construction</strong> (Nikhil)
                   </p>
                   <p>
                     Email:{" "}

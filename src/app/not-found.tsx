@@ -21,8 +21,8 @@ export default function NotFound() {
               <Link href="/" className="inline-flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-bold px-6 py-3 text-xs uppercase tracking-widest rounded-md transition-all">
                 <Home className="h-4 w-4" /> Back to Home
               </Link>
-              <Link href="/education" className="inline-flex items-center justify-center gap-2 bg-white border border-slate-300 text-slate-700 hover:bg-slate-50 font-bold px-6 py-3 text-xs uppercase tracking-widest rounded-md transition-all">
-                Explore Learning <ArrowRight className="h-4 w-4" />
+              <Link href="/services" className="inline-flex items-center justify-center gap-2 bg-white border border-slate-300 text-slate-700 hover:bg-slate-50 font-bold px-6 py-3 text-xs uppercase tracking-widest rounded-md transition-all">
+                Explore Services <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
           </div>

@@ -52,7 +52,7 @@ export async function GET() {
       { headers: { "Cache-Control": "no-store, no-cache" } }
     );
   } catch (error: any) {
-    console.error("Error fetching Civil At Hand courses:", error);
+    console.error("Error fetching NS Construction courses:", error);
     return NextResponse.json({ courses: [] });
   }
 }

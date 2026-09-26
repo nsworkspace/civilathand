@@ -6,9 +6,9 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "About Civil At Hand",
+  title: "About NS Construction",
   description:
-    "Civil At Hand is a practical civil engineering and architecture learning platform for students, professionals and job seekers.",
+    "NS Construction is a civil engineering and construction company serving clients across India.",
 };
 
 const pillars: Array<{ title: string; description: string; icon: LucideIcon }> = [
@@ -45,18 +45,18 @@ export default function AboutPage() {
       <main id="main-content">
         <section className="bg-[#07111f] text-white">
           <div className="mx-auto max-w-7xl px-5 py-20 sm:px-7 lg:px-8 lg:py-28">
-            <p className="text-xs font-black uppercase tracking-[.18em] text-orange-400">About Civil At Hand</p>
+            <p className="text-xs font-black uppercase tracking-[.18em] text-orange-400">About NS Construction</p>
             <h1 className="mt-5 max-w-4xl font-display text-4xl font-black tracking-tight sm:text-6xl">
-              A practical home for the civil and architecture community.
+              Civil engineering and construction, done right.
             </h1>
             <p className="mt-6 max-w-3xl text-base leading-8 text-slate-300 sm:text-lg">
-              Civil At Hand is being built as a universal learning and career platform —
-              not just for students, and not just for one job role. The goal is to help
-              people understand the profession, build useful skills and keep progressing.
+              NS Construction delivers civil engineering, construction and project
+              execution services — built on reliable planning, quality workmanship
+              and clear communication from start to handover.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Link href="/education" className="inline-flex items-center gap-2 rounded-xl bg-orange-500 px-5 py-3 text-sm font-bold">
-                Explore learning <ArrowRight className="h-4 w-4" />
+              <Link href="/services" className="inline-flex items-center gap-2 rounded-xl bg-orange-500 px-5 py-3 text-sm font-bold">
+                Explore services <ArrowRight className="h-4 w-4" />
               </Link>
               <Link href="/work-with-us" className="inline-flex items-center gap-2 rounded-xl border border-white/15 px-5 py-3 text-sm font-bold">
                 Explore careers

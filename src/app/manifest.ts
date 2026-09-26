@@ -16,7 +16,7 @@ export default function manifest(): MetadataRoute.Manifest {
     theme_color: "#0a192f",
     lang: "en-IN",
     dir: "ltr",
-    categories: ["business", "education", "productivity", "utilities"],
+    categories: ["business", "construction", "productivity"],
     icons: [
       {
         src: "/icons/icon-192.png",
@@ -45,24 +45,17 @@ export default function manifest(): MetadataRoute.Manifest {
     ],
     shortcuts: [
       {
-        name: "Calculators",
-        short_name: "Calculators",
-        description: "Open Civil At Hand engineering calculators",
-        url: "/calculators",
-        icons: [{ src: "/icons/icon-192.png", sizes: "192x192", type: "image/png" }],
-      },
-      {
         name: "Contact Us",
         short_name: "Contact",
-        description: "Get in touch with Civil At Hand",
+        description: "Get in touch with NS Construction",
         url: "/contact",
         icons: [{ src: "/icons/icon-192.png", sizes: "192x192", type: "image/png" }],
       },
       {
-        name: "Education",
-        short_name: "Education",
-        description: "practical civil engineering education, mentorship and software courses",
-        url: "/education",
+        name: "Services",
+        short_name: "Services",
+        description: "Explore NS Construction's services",
+        url: "/services",
         icons: [{ src: "/icons/icon-192.png", sizes: "192x192", type: "image/png" }],
       },
     ],

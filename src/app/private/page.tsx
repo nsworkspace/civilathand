@@ -47,7 +47,7 @@ const COPY_MESSAGES = [
   {
     id: "onboarding",
     title: "👤 Team Onboarding Invitation",
-    text: `Please register here as a new candidate for Civil At Hand and save your details in the database.\n\n🔗 ${SITE.url}/team-onboarding\n\nWe welcome you to our team!`,
+    text: `Please register here as a new candidate for NS Construction and save your details in the database.\n\n🔗 ${SITE.url}/team-onboarding\n\nWe welcome you to our team!`,
   },
   {
     id: "whatsapp",

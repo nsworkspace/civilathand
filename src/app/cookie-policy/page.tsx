@@ -4,7 +4,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Cookie Policy | Civil At Hand",
+  title: "Cookie Policy | NS Construction",
   description: "Read our Cookie Policy to understand how we use cookies and similar technologies to enhance your experience on civilathan.in.",
 };
 
@@ -23,7 +23,7 @@ export default function CookiePolicyPage() {
               Cookie Policy
             </h1>
             <div className="mt-4 flex items-center justify-center gap-3 text-xs font-medium text-slate-400">
-              <span>Civil At Hand</span>
+              <span>NS Construction</span>
               <span>•</span>
               <span>civilathan.in</span>
               <span>•</span>
@@ -43,7 +43,7 @@ export default function CookiePolicyPage() {
                   <span className="text-orange-500 font-black">1.</span> Introduction
                 </h2>
                 <p>
-                  Civil At Hand ("we," "us," or "our") uses cookies and similar tracking technologies on our website <a href="https://civilathan.in" className="text-orange-600 hover:text-orange-700 underline font-semibold">civilathan.in</a>. This Cookie Policy explains what cookies are, how we use them, and your choices regarding their use. By continuing to use our website, you consent to our use of cookies as described in this policy.
+                  NS Construction ("we," "us," or "our") uses cookies and similar tracking technologies on our website <a href="https://civilathan.in" className="text-orange-600 hover:text-orange-700 underline font-semibold">civilathan.in</a>. This Cookie Policy explains what cookies are, how we use them, and your choices regarding their use. By continuing to use our website, you consent to our use of cookies as described in this policy.
                 </p>
               </div>
 
@@ -136,7 +136,7 @@ export default function CookiePolicyPage() {
                 </h2>
                 <div className="space-y-1 text-slate-600 font-medium">
                   <p>
-                    <strong>Civil At Hand</strong> ( Nikhil )
+                    <strong>NS Construction</strong> ( Nikhil )
                   </p>
                   <p>
                     Email:{" "}

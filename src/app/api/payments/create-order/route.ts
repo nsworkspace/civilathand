@@ -80,7 +80,7 @@ export async function POST(request: Request) {
 
     let amount: number | null = null;
     let freeEnabled = true;
-    let description = "Civil At Hand Payment";
+    let description = "NS Construction Payment";
     // `notes` is the authoritative record of "what was this order for" —
     // verify-order and the webhook both read identity back from here.
     let notes: Record<string, string> = {
@@ -129,7 +129,7 @@ export async function POST(request: Request) {
       }
       amount = Number(item.amount) || 0;
       freeEnabled = item.freeEnabled !== false;
-      description = item?.title || "Civil At Hand — 1:1 Mentorship Program Enrollment";
+      description = item?.title || "NS Construction — 1:1 Mentorship Program Enrollment";
       notes = { ...notes, itemSlug: MENTORSHIP_SLUG };
       receiptBase = "mentorship";
     } else if (type === "invoice") {
@@ -156,7 +156,7 @@ export async function POST(request: Request) {
         return NextResponse.json({ error: "This invoice belongs to a different account." }, { status: 403 });
       }
       amount = Number(invoice.amount) || 0;
-      description = `Invoice #${String(invoice.id).toUpperCase()} — ${invoice.projectTitle || "Civil At Hand Service"}`;
+      description = `Invoice #${String(invoice.id).toUpperCase()} — ${invoice.projectTitle || "NS Construction Service"}`;
       notes = { ...notes, invoiceId: invoice.id, projectId: invoice.projectId || "" };
       receiptBase = invoice.id;
     } else if (type === "custom") {

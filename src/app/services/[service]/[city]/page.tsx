@@ -41,8 +41,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     return { title: "Not Found" };
   }
 
-  const title = `${service.title} Services in ${city.name} | Civil At Hand`;
-  const description = `Looking for ${service.title.toLowerCase()} in ${city.name}, ${city.state}? Civil At Hand delivers IS-code compliant ${service.title.toLowerCase()} with fast turnaround, available online and on-site across ${city.name}.`;
+  const title = `${service.title} Services in ${city.name} | NS Construction`;
+  const description = `Looking for ${service.title.toLowerCase()} in ${city.name}, ${city.state}? NS Construction delivers IS-code compliant ${service.title.toLowerCase()} with fast turnaround, available online and on-site across ${city.name}.`;
   const url = `${SITE.url}/services/${service.id}/${city.slug}`;
 
   return {
@@ -86,11 +86,11 @@ export default async function ServiceCityPage({ params }: PageProps) {
     },
     {
       q: `Which standards apply to ${service.title.toLowerCase()} in ${city.name}?`,
-      a: `The service follows the standards listed for this discipline in the Civil At Hand service catalogue: ${service.standards.slice(0, 4).join(", ")}. Project-specific requirements are confirmed during scope review.`,
+      a: `The service follows the standards listed for this discipline in the NS Construction service catalogue: ${service.standards.slice(0, 4).join(", ")}. Project-specific requirements are confirmed during scope review.`,
     },
     {
       q: `How can I request a ${service.title.toLowerCase()} quote in ${city.name}?`,
-      a: `Use the Civil At Hand Talk or Contact path and share the project type, location, approximate size, drawings if available, required deliverables and target timeline. A project-specific quotation can then be prepared.`,
+      a: `Use the NS Construction Talk or Contact path and share the project type, location, approximate size, drawings if available, required deliverables and target timeline. A project-specific quotation can then be prepared.`,
     },
   ];
   const breadcrumbJsonLd = {

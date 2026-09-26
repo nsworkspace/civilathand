@@ -6,10 +6,10 @@ import { Footer } from "@/components/Footer";
 import { getSitePage, mergePageFallback } from "@/lib/siteContent";
 import { sectors } from "@/data/brandExperience";
 
-export const metadata: Metadata = { title: "Sectors", description: "Explore the sectors and project contexts Civil At Hand supports across engineering, design, documentation and digital workflows." };
+export const metadata: Metadata = { title: "Sectors", description: "Explore the sectors and project contexts NS Construction supports across engineering, design, documentation and digital workflows." };
 
 export default async function SectorsPage() {
-  const pageContent = mergePageFallback({ slug: "sectors", path: "/sectors", pageType: "existing", status: "published", title: "Sectors", description: "Explore the sectors and project contexts Civil At Hand supports.", heroTitle: "Sectors", heroDescription: "Explore the sectors and project contexts Civil At Hand supports." }, await getSitePage("sectors"));
+  const pageContent = mergePageFallback({ slug: "sectors", path: "/sectors", pageType: "existing", status: "published", title: "Sectors", description: "Explore the sectors and project contexts NS Construction supports.", heroTitle: "Sectors", heroDescription: "Explore the sectors and project contexts NS Construction supports." }, await getSitePage("sectors"));
 
   return <div className="min-h-screen bg-slate-50"><Header /><main>
     <section className="bg-navy-950 py-24 text-white md:py-32"><div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"><span className="text-[10px] font-extrabold uppercase tracking-[.22em] text-orange-400">Sectors & project context</span><h1 className="mt-4 max-w-4xl font-display text-4xl font-extrabold sm:text-6xl">{pageContent.heroTitle || "Engineering shaped by what you are building."}</h1><p className="mt-6 max-w-2xl text-sm leading-7 text-slate-300 sm:text-base">The same engineering discipline looks different in a residential building, industrial facility, infrastructure corridor or digital built-environment workflow. Our site now makes that context explicit.</p></div></section>

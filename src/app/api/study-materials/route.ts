@@ -104,7 +104,7 @@ export async function POST(request: Request) {
         sourceType: "study-material",
         sourceId: id,
         title,
-        description: description || `Premium Civil At Hand study material — ${subject}.`,
+        description: description || `Premium NS Construction study material — ${subject}.`,
         active: published,
         amount: material.price,
       });

@@ -80,7 +80,7 @@ export default function ServicesHubPage() {
               transition={{ delay: 0.15 }}
               className="mt-3 text-sm text-slate-600 leading-relaxed font-medium"
             >
-              Civil At Hand provides end-to-end civil engineering services including structural design, architectural planning, BOQ estimation, BIM modelling, and construction consulting.
+              NS Construction provides end-to-end civil engineering services including structural design, architectural planning, BOQ estimation, BIM modelling, and construction consulting.
             </motion.p>
           </div>
 

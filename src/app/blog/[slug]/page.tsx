@@ -375,7 +375,7 @@ export default function BlogDetailPage({ params }: { params: Promise<{ slug: str
     },
     publisher: {
       "@type": "Organization",
-      name: "Civil At Hand",
+      name: "NS Construction",
       url: SITE.url,
     },
     mainEntityOfPage: canonicalUrl,

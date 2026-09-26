@@ -12,8 +12,7 @@ const PUBLIC_ROUTES = [
   "/", "/about", "/portfolio", "/blog", "/contact", "/faq", "/talk", "/gallery", "/links",
   "/accessibility-statement", "/cookie-policy", "/privacy-policy", "/terms-and-conditions",
   "/engineering-disclaimer",
-  "/community", "/calculators", "/engineering-unit-converter",
-  "/engineering-unit-converters/concrete", "/work-with-us",
+  "/community", "/work-with-us",
 ];
 
 function entry(path: string, now: Date, priority = 0.6): MetadataRoute.Sitemap[number] {
@@ -46,14 +45,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     for (const project of portfolioItems as any[]) {
       const id = String(project.id || generateSlug(String(project.title || ""))).trim();
       if (id) add({ url: `${BASE_URL}/portfolio/${encodeURIComponent(id)}`, lastModified: project.updatedAt || project.createdAt || now, changeFrequency: "monthly", priority: 0.65 });
-    }
-
-    const courses = await db.collection("software_courses")
-      .find({ slug: { $exists: true, $nin: [null, ""] }, comingSoon: { $ne: true } })
-      .project({ slug: 1, updatedAt: 1, createdAt: 1 }).toArray();
-    for (const course of courses as any[]) {
-      const slug = String(course.slug).trim();
-      if (slug) add({ url: `${BASE_URL}/education/courses/${encodeURIComponent(slug)}`, lastModified: course.updatedAt || course.createdAt || now, changeFrequency: "monthly", priority: 0.7 });
     }
 
     const careerSettings = await db.collection("career_settings").findOne({ key: "career_config" });

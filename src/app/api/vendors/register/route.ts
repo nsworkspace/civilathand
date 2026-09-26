@@ -35,7 +35,7 @@ export async function POST(req: Request) {
     }
     if (missing.length) return NextResponse.json({ error: `Please complete: ${missing.join(", ")}.` }, { status: 400 });
     if (!validHttpsUrl(website)) return NextResponse.json({ error: "Website must use a valid HTTPS address." }, { status: 400 });
-    if (email !== user.email!.trim().toLowerCase()) return NextResponse.json({ error: "The registration email must match your verified Civil At Hand account email." }, { status: 400 });
+    if (email !== user.email!.trim().toLowerCase()) return NextResponse.json({ error: "The registration email must match your verified NS Construction account email." }, { status: 400 });
 
     const client = await clientPromise;
     const db = client.db(dbName);

@@ -19,7 +19,7 @@ const categories = [
     color: "bg-orange-500",
     faqs: [
       {
-        q: "What civil engineering services does Civil At Hand provide?",
+        q: "What civil engineering services does NS Construction provide?",
         a: "We provide structural design (RCC and steel), BOQ estimation, quantity surveying, BIM coordination (LOD 300–400), PDF to AutoCAD conversion, and interior design services. All deliverables are IS code and CPWD DSR 2023 compliant.",
       },
       {
@@ -118,8 +118,8 @@ const categories = [
     color: "bg-emerald-600",
     faqs: [
       {
-        q: "What is Civil At Hand Education?",
-        a: "Civil At Hand Education is our dedicated learning platform for civil engineering students and professionals, focused on 1-on-1 mentorship and practical software courses with industry-oriented guidance."
+        q: "What is NS Construction Education?",
+        a: "NS Construction Education is our dedicated learning platform for civil engineering students and professionals, focused on 1-on-1 mentorship and practical software courses with industry-oriented guidance."
       },
       {
         q: "How does the 1-on-1 mentorship work?",
@@ -191,7 +191,7 @@ export default function FAQPage() {
               Frequently Asked <span className="text-orange-500">Questions</span>
             </h1>
             <p className="mt-4 text-sm text-slate-400 font-medium max-w-xl mx-auto leading-relaxed">
-              Everything you need to know about Civil At Hand engineering services, pricing, BOQ, BIM, and
+              Everything you need to know about NS Construction engineering services, pricing, BOQ, BIM, and
               our Education platform.
             </p>
           </div>

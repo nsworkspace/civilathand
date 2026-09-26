@@ -32,7 +32,7 @@ export default function GlobalError({
           }}
         >
           <h1 style={{ fontSize: "28px", fontWeight: 800, marginBottom: "12px" }}>
-            Civil At Hand is temporarily unavailable
+            NS Construction is temporarily unavailable
           </h1>
           <p style={{ color: "#94a3b8", maxWidth: "420px", marginBottom: "24px", fontSize: "14px" }}>
             Something went wrong loading the site. Please try again in a moment.

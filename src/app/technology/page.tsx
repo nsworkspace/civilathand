@@ -6,7 +6,7 @@ import { Footer } from "@/components/Footer";
 import { getSitePage, mergePageFallback } from "@/lib/siteContent";
 import { digitalCapabilities } from "@/data/brandExperience";
 
-export const metadata: Metadata = { title: "Digital Engineering", description: "Civil At Hand digital engineering capabilities across BIM, CAD, quantity workflows, GIS and project information." };
+export const metadata: Metadata = { title: "Digital Engineering", description: "NS Construction digital engineering capabilities across BIM, CAD, quantity workflows, GIS and project information." };
 
 export default async function TechnologyPage() {
   const pageContent = mergePageFallback({ slug: "technology", path: "/technology", pageType: "existing", status: "published", title: "Digital Engineering", description: "Digital engineering capabilities across BIM, CAD, GIS and project information.", heroTitle: "Digital Engineering", heroDescription: "Digital engineering capabilities across BIM, CAD, GIS and project information." }, await getSitePage("technology"));

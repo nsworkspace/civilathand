@@ -15,7 +15,7 @@ const SOCIAL_IMAGE = "/opengraph-image";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
-    default: `${SITE.name} | Civil & Architecture Learning Platform`,
+    default: `${SITE.name} | Civil Engineering & Construction Company`,
     template: `%s | ${SITE.name}`,
   },
   description: SITE.description,
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     locale: "en_IN",
     url: SITE.url,
     siteName: SITE.name,
-    title: `${SITE.name} | Civil & Architecture Learning Platform`,
+    title: `${SITE.name} | Civil Engineering & Construction Company`,
     description: SITE.shortDescription,
     images: [
       {
@@ -38,13 +38,13 @@ export const metadata: Metadata = {
         width: 1200,
         height: 630,
         type: "image/png",
-        alt: "Civil At Hand — Civil Engineering & Architecture Learning Platform",
+        alt: "NS Construction — Civil Engineering & Construction Company",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: `${SITE.name} | Civil & Architecture Learning Platform`,
+    title: `${SITE.name} | Civil Engineering & Construction Company`,
     description: SITE.shortDescription,
     images: [SOCIAL_IMAGE],
   },

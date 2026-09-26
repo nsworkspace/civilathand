@@ -4,8 +4,8 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Terms and Conditions | Civil At Hand",
-  description: "Read the Terms and Conditions of Civil At Hand governing the use of our website and the provision of civil engineering and architectural services.",
+  title: "Terms and Conditions | NS Construction",
+  description: "Read the Terms and Conditions of NS Construction governing the use of our website and the provision of civil engineering and architectural services.",
 };
 
 export default function TermsAndConditionsPage() {
@@ -23,7 +23,7 @@ export default function TermsAndConditionsPage() {
               Terms and Conditions
             </h1>
             <div className="mt-4 flex items-center justify-center gap-3 text-xs font-medium text-slate-400">
-              <span>Civil At Hand</span>
+              <span>NS Construction</span>
               <span>•</span>
               <span>civilathan.in</span>
               <span>•</span>
@@ -43,7 +43,7 @@ export default function TermsAndConditionsPage() {
                   <span className="text-orange-500 font-black">1.</span> Acceptance of Terms
                 </h2>
                 <p>
-                  By accessing and using the website <a href="https://civilathan.in" className="text-orange-600 hover:text-orange-700 underline font-semibold">civilathan.in</a> (the "Site") and engaging the services of <strong>Civil At Hand</strong> ("we," "us," or "our"), owned by Nikhil, you agree to comply with and be bound by these Terms and Conditions ("Terms"). If you do not agree to these Terms, please do not use the Site or our services.
+                  By accessing and using the website <a href="https://civilathan.in" className="text-orange-600 hover:text-orange-700 underline font-semibold">civilathan.in</a> (the "Site") and engaging the services of <strong>NS Construction</strong> ("we," "us," or "our"), owned by Nikhil, you agree to comply with and be bound by these Terms and Conditions ("Terms"). If you do not agree to these Terms, please do not use the Site or our services.
                 </p>
               </div>
 
@@ -53,7 +53,7 @@ export default function TermsAndConditionsPage() {
                   <span className="text-orange-500 font-black">2.</span> Scope of Services
                 </h2>
                 <p className="mb-2">
-                  Civil At Hand provides a comprehensive range of civil engineering and architectural services, including but not limited to:
+                  NS Construction provides a comprehensive range of civil engineering and architectural services, including but not limited to:
                 </p>
                 <ul className="list-disc pl-5 space-y-1 text-slate-600">
                   <li>Structural design and analysis</li>
@@ -134,7 +134,7 @@ export default function TermsAndConditionsPage() {
                   <span className="text-orange-500 font-black">6.</span> Intellectual Property
                 </h2>
                 <p>
-                  All designs, drawings, reports, calculations, models, and other deliverables created by Civil At Hand for a client remain our intellectual property until full payment is received. Upon full payment, the client receives a non‑exclusive, non‑transferable license to use the deliverables for the specific project for which they were created. We retain all rights to our underlying methodologies, processes, and proprietary tools. The client may not sell, distribute, or sub‑license our deliverables to any third party without our prior written consent.
+                  All designs, drawings, reports, calculations, models, and other deliverables created by NS Construction for a client remain our intellectual property until full payment is received. Upon full payment, the client receives a non‑exclusive, non‑transferable license to use the deliverables for the specific project for which they were created. We retain all rights to our underlying methodologies, processes, and proprietary tools. The client may not sell, distribute, or sub‑license our deliverables to any third party without our prior written consent.
                 </p>
               </div>
 
@@ -144,7 +144,7 @@ export default function TermsAndConditionsPage() {
                   <span className="text-orange-500 font-black">7.</span> Limitation of Liability
                 </h2>
                 <p>
-                  To the maximum extent permitted by applicable law, Civil At Hand shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to loss of profits, data, or business opportunities, arising out of or in connection with your use of our website, services, or deliverables, even if we have been advised of the possibility of such damages. Our total liability to you for any claim arising under these Terms shall not exceed the total amount paid by you to us for the specific project giving rise to the claim.
+                  To the maximum extent permitted by applicable law, NS Construction shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to loss of profits, data, or business opportunities, arising out of or in connection with your use of our website, services, or deliverables, even if we have been advised of the possibility of such damages. Our total liability to you for any claim arising under these Terms shall not exceed the total amount paid by you to us for the specific project giving rise to the claim.
                 </p>
               </div>
 
@@ -154,7 +154,7 @@ export default function TermsAndConditionsPage() {
                   <span className="text-orange-500 font-black">8.</span> Indemnification
                 </h2>
                 <p className="mb-2">
-                  You agree to indemnify, defend, and hold harmless Civil At Hand, its owner, collaborators, and service providers from and against any claims, damages, losses, costs, and expenses (including reasonable legal fees) arising from:
+                  You agree to indemnify, defend, and hold harmless NS Construction, its owner, collaborators, and service providers from and against any claims, damages, losses, costs, and expenses (including reasonable legal fees) arising from:
                 </p>
                 <ul className="list-disc pl-5 space-y-1 text-slate-600">
                   <li>Your breach of these Terms or any applicable law</li>
@@ -221,7 +221,7 @@ export default function TermsAndConditionsPage() {
                 </h2>
                 <div className="space-y-1 text-slate-600 font-medium">
                   <p>
-                    <strong>Civil At Hand</strong> (Nikhil)
+                    <strong>NS Construction</strong> (Nikhil)
                   </p>
                   <p>
                     Email:{" "}

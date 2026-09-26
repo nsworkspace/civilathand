@@ -9,7 +9,7 @@ import { SITE } from "@/data/site";
 
 export const metadata: Metadata = {
   title: "Engineering Services Pricing & Scope",
-  description: "See how Civil At Hand scopes engineering service pricing, what drives the quotation and which deliverables can be included.",
+  description: "See how NS Construction scopes engineering service pricing, what drives the quotation and which deliverables can be included.",
   alternates: { canonical: `${SITE.url}/pricing` },
 };
 

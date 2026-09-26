@@ -46,7 +46,7 @@ export default function ProposalsPage() {
         <div className="max-w-4xl mx-auto px-4">
           <div className="mb-8">
             <h1 className="text-2xl md:text-3xl font-display font-extrabold text-navy-950">Your Proposals</h1>
-            <p className="text-slate-500 text-sm mt-1.5">Service proposals shared with you by Civil At Hand.</p>
+            <p className="text-slate-500 text-sm mt-1.5">Service proposals shared with you by NS Construction.</p>
           </div>
 
           {loading ? (

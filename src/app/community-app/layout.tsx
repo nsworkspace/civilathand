@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import CommunityPwaRegister from "@/components/CommunityPwaRegister";
 
 export const metadata: Metadata = {
-  title: "Community | Civil At Hand",
-  description: "Civil At Hand professional community rooms and conversations.",
-  applicationName: "Civil At Hand Community",
+  title: "Community | NS Construction",
+  description: "NS Construction professional community rooms and conversations.",
+  applicationName: "NS Construction Community",
   manifest: "/community-app/manifest.webmanifest",
   robots: { index: false, follow: false },
   appleWebApp: { capable: true, title: "CAH Community", statusBarStyle: "black-translucent" },

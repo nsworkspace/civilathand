@@ -4,8 +4,8 @@ import { SITE } from "@/data/site";
 import { getSitePage, mergePageFallback } from "@/lib/siteContent";
 
 export const metadata: Metadata = {
-  title: "Project Planner | Civil At Hand",
-  description: "Build a practical engineering project brief for structural design, BOQ, BIM, CAD and related Civil At Hand services.",
+  title: "Project Planner | NS Construction",
+  description: "Build a practical engineering project brief for structural design, BOQ, BIM, CAD and related NS Construction services.",
   alternates: { canonical: `${SITE.url}/project-planner` },
 };
 

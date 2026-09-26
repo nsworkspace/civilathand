@@ -4,7 +4,7 @@ import { SITE } from "@/data/site";
 
 export const dynamic = "force-dynamic";
 export async function generateMetadata(): Promise<Metadata> {
-  const fallbackTitle = "Civil At Hand Mentorship | Civil Engineering Specialists";
+  const fallbackTitle = "NS Construction Mentorship | Civil Engineering Specialists";
   const fallbackDescription = "Universal civil engineering mentorship for exams, government careers, private-sector roles, structural design, BIM, site work, architecture and career direction.";
   try {
     const db = (await clientPromise).db(process.env.MONGODB_DB || "civil-at-hand");

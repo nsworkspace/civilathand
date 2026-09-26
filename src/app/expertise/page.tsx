@@ -7,7 +7,7 @@ import { getSitePage, mergePageFallback } from "@/lib/siteContent";
 import ExecutiveEngineeringSection from "@/components/ExecutiveEngineeringSection";
 import { expertiseGroups, lifecycle } from "@/data/brandExperience";
 
-export const metadata: Metadata = { title: "Engineering Expertise", description: "Explore Civil At Hand's engineering, project delivery, digital engineering and technical advisory capabilities." };
+export const metadata: Metadata = { title: "Engineering Expertise", description: "Explore NS Construction's engineering, project delivery, digital engineering and technical advisory capabilities." };
 
 export default async function ExpertisePage() {
   const pageContent = mergePageFallback({ slug: "expertise", path: "/expertise", pageType: "existing", status: "published", title: "Expertise", description: "Engineering capability and project delivery expertise.", heroTitle: "Expertise", heroDescription: "Engineering capability and project delivery expertise." }, await getSitePage("expertise"));
@@ -21,7 +21,7 @@ export default async function ExpertisePage() {
           <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <span className="text-[10px] font-extrabold uppercase tracking-[.22em] text-orange-400">Engineering capability</span>
             <h1 className="mt-4 max-w-4xl font-display text-4xl font-extrabold tracking-tight sm:text-6xl">{pageContent.heroTitle || "Technical depth, organized around the project."}</h1>
-            <p className="mt-6 max-w-2xl text-sm leading-7 text-slate-300 sm:text-base">{pageContent.heroDescription || "A clear capability architecture helps developers, contractors, architects and project owners understand where Civil At Hand can contribute and what the next step looks like."}</p>
+            <p className="mt-6 max-w-2xl text-sm leading-7 text-slate-300 sm:text-base">{pageContent.heroDescription || "A clear capability architecture helps developers, contractors, architects and project owners understand where NS Construction can contribute and what the next step looks like."}</p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link href="/project-planner" className="inline-flex items-center gap-2 rounded-full bg-orange-500 px-6 py-3 text-xs font-extrabold uppercase tracking-widest text-white hover:bg-orange-600">Start a project brief <ArrowRight className="h-4 w-4" /></Link>
               <Link href="/portfolio" className="inline-flex items-center gap-2 rounded-full border border-white/20 px-6 py-3 text-xs font-extrabold uppercase tracking-widest text-white hover:bg-white/10">Explore projects</Link>

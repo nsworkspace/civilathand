@@ -3,7 +3,7 @@ import Link from "next/link";
 import { WifiOff, RefreshCw } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "You're Offline | Civil At Hand",
+  title: "You're Offline | NS Construction",
   robots: { index: false, follow: false },
 };
 

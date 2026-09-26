@@ -4,8 +4,8 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Engineering Disclaimer | Civil At Hand",
-  description: "Read the Engineering Disclaimer of Civil At Hand to understand the limitations, scope of technical advice, and liability regarding civil engineering and architectural design deliverables.",
+  title: "Engineering Disclaimer | NS Construction",
+  description: "Read the Engineering Disclaimer of NS Construction to understand the limitations, scope of technical advice, and liability regarding civil engineering and architectural design deliverables.",
 };
 
 export default function EngineeringDisclaimerPage() {
@@ -23,7 +23,7 @@ export default function EngineeringDisclaimerPage() {
               Engineering Disclaimer
             </h1>
             <div className="mt-4 flex items-center justify-center gap-3 text-xs font-medium text-slate-400">
-              <span>Civil At Hand</span>
+              <span>NS Construction</span>
               <span>•</span>
               <span>civilathan.in</span>
               <span>•</span>
@@ -43,7 +43,7 @@ export default function EngineeringDisclaimerPage() {
                   <span className="text-orange-500 font-black">1.</span> General Disclaimer
                 </h2>
                 <p className="mb-3">
-                  The information, content, services, and deliverables provided by <strong>Civil At Hand</strong> ("we," "us," or "our") – owned by Nikhil – through our website{" "}
+                  The information, content, services, and deliverables provided by <strong>NS Construction</strong> ("we," "us," or "our") – owned by Nikhil – through our website{" "}
                   <a href="https://civilathan.in" className="text-orange-600 hover:text-orange-700 underline font-semibold">
                     civilathan.in
                   </a>{" "}
@@ -60,13 +60,13 @@ export default function EngineeringDisclaimerPage() {
                   <span className="text-orange-500 font-black">2.</span> Engineering and Technical Advice
                 </h2>
                 <p className="mb-2">
-                  All engineering estimates, designs, drawings, BOQs, structural inputs, and technical outputs provided by Civil At Hand are based solely on the information, data, dimensions, and specifications supplied by the client. Accordingly:
+                  All engineering estimates, designs, drawings, BOQs, structural inputs, and technical outputs provided by NS Construction are based solely on the information, data, dimensions, and specifications supplied by the client. Accordingly:
                 </p>
                 <ul className="list-disc pl-5 space-y-2 text-slate-600">
                   <li>We make no warranty that any estimate, drawing, or technical document is accurate, complete, or suitable for any specific site, structure, or jurisdiction</li>
                   <li>Our services constitute design assistance and consultancy only and do not replace the certification or verification of a registered, licensed professional engineer in the client's jurisdiction</li>
                   <li>Clients are strongly advised to have all deliverables reviewed and certified by a locally licensed engineer or competent authority where required by applicable law or building regulations</li>
-                  <li>Civil At Hand does not take responsibility for errors arising from incorrect, incomplete, or outdated information provided by the client</li>
+                  <li>NS Construction does not take responsibility for errors arising from incorrect, incomplete, or outdated information provided by the client</li>
                 </ul>
               </div>
 
@@ -76,7 +76,7 @@ export default function EngineeringDisclaimerPage() {
                   <span className="text-orange-500 font-black">3.</span> Limitation of Liability for Construction and Site Use
                 </h2>
                 <p className="mb-2">
-                  Our deliverables are prepared as design and planning tools. Civil At Hand expressly disclaims all liability for:
+                  Our deliverables are prepared as design and planning tools. NS Construction expressly disclaims all liability for:
                 </p>
                 <ul className="list-disc pl-5 space-y-2 text-slate-600">
                   <li>Construction defects, structural failures, or site accidents arising from the use or misuse of our deliverables</li>
@@ -93,7 +93,7 @@ export default function EngineeringDisclaimerPage() {
                   <span className="text-orange-500 font-black">4.</span> AI‑Assisted Services and Calculator Tools
                 </h2>
                 <p>
-                  Civil At Hand utilises artificial intelligence (AI) tools, platforms, and custom calculation engines to assist in the preparation of certain deliverables, including estimates generated through our online calculators. These tools are used solely as aids; all outputs are reviewed, refined, and verified by our team of qualified engineers before delivery. Nevertheless, we make no warranty that such outputs are free from errors, limitations, or biases inherent in AI technologies. AI‑generated and calculator‑derived content should always be reviewed critically and verified by a qualified professional before implementation.
+                  NS Construction utilises artificial intelligence (AI) tools, platforms, and custom calculation engines to assist in the preparation of certain deliverables, including estimates generated through our online calculators. These tools are used solely as aids; all outputs are reviewed, refined, and verified by our team of qualified engineers before delivery. Nevertheless, we make no warranty that such outputs are free from errors, limitations, or biases inherent in AI technologies. AI‑generated and calculator‑derived content should always be reviewed critically and verified by a qualified professional before implementation.
                 </p>
               </div>
 
@@ -117,7 +117,7 @@ export default function EngineeringDisclaimerPage() {
                   <span className="text-orange-500 font-black">6.</span> Third‑Party Content and Links
                 </h2>
                 <p>
-                  Our website may contain links to, or embed content from, third‑party websites and platforms (e.g., Razorpay, Google Analytics). Civil At Hand has no control over, and accepts no responsibility for, the content, accuracy, or privacy practices of any third‑party website. The inclusion of any link or reference does not imply our endorsement of the linked website or its content.
+                  Our website may contain links to, or embed content from, third‑party websites and platforms (e.g., Razorpay, Google Analytics). NS Construction has no control over, and accepts no responsibility for, the content, accuracy, or privacy practices of any third‑party website. The inclusion of any link or reference does not imply our endorsement of the linked website or its content.
                 </p>
               </div>
 
@@ -127,7 +127,7 @@ export default function EngineeringDisclaimerPage() {
                   <span className="text-orange-500 font-black">7.</span> No Warranty
                 </h2>
                 <p>
-                  To the maximum extent permitted by applicable law, Civil At Hand provides all services and content on an "as is" and "as available" basis without warranties of any kind, whether express or implied, including but not limited to implied warranties of merchantability, fitness for a particular purpose, non‑infringement, or accuracy.
+                  To the maximum extent permitted by applicable law, NS Construction provides all services and content on an "as is" and "as available" basis without warranties of any kind, whether express or implied, including but not limited to implied warranties of merchantability, fitness for a particular purpose, non‑infringement, or accuracy.
                 </p>
               </div>
 
@@ -147,7 +147,7 @@ export default function EngineeringDisclaimerPage() {
                   <span className="text-orange-500 font-black">9.</span> Indemnification
                 </h2>
                 <p className="mb-2">
-                  By using our website and services, you agree to indemnify, defend, and hold harmless Civil At Hand, its owner, collaborators, and service providers from and against any claims, damages, losses, costs, and expenses (including reasonable legal fees) arising from:
+                  By using our website and services, you agree to indemnify, defend, and hold harmless NS Construction, its owner, collaborators, and service providers from and against any claims, damages, losses, costs, and expenses (including reasonable legal fees) arising from:
                 </p>
                 <ul className="list-disc pl-5 space-y-2 text-slate-600">
                   <li>Your breach of these terms or any applicable law</li>
@@ -174,7 +174,7 @@ export default function EngineeringDisclaimerPage() {
                 </h2>
                 <div className="space-y-1 text-slate-600 font-medium">
                   <p>
-                    <strong>Civil At Hand</strong> (Nikhil)
+                    <strong>NS Construction</strong> (Nikhil)
                   </p>
                   <p>
                     Email:{" "}

@@ -33,10 +33,10 @@ function AdminProfileButton() {
   return (
     <div
       className="w-8 h-8 rounded-lg bg-gradient-to-br from-orange-500 to-orange-600 flex-shrink-0 overflow-hidden shadow-[0_0_12px_rgba(249,115,22,0.35)]"
-      aria-label="Civil At Hand"
+      aria-label="NS Construction"
     >
       {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src="/logo.jpg" alt="Civil At Hand" className="w-full h-full object-cover" />
+      <img src="/logo.jpg" alt="NS Construction" className="w-full h-full object-cover" />
     </div>
   );
 }
@@ -160,7 +160,7 @@ function LoginScreen({ onLogin }: { onLogin: () => void }) {
           <span className="text-[10px] font-mono text-slate-600">{time} IST</span>
           <div className="flex items-center gap-1.5 bg-orange-500/10 border border-orange-500/20 px-3 py-1 rounded-full">
             <Shield className="h-3 w-3 text-orange-400" />
-            <span className="text-[10px] font-bold text-orange-400 uppercase tracking-wider">Civil At Hand</span>
+            <span className="text-[10px] font-bold text-orange-400 uppercase tracking-wider">NS Construction</span>
           </div>
         </div>
       </div>
@@ -303,7 +303,7 @@ function LoginScreen({ onLogin }: { onLogin: () => void }) {
       {/* Bottom bar */}
       <div className="relative z-10 px-6 py-3 border-t border-white/5 flex items-center justify-between">
         <span className="text-[10px] text-slate-700 font-mono">CAH-CTRL v2.1</span>
-        <span className="text-[10px] text-slate-700">© {new Date().getFullYear()} Civil At Hand</span>
+        <span className="text-[10px] text-slate-700">© {new Date().getFullYear()} NS Construction</span>
       </div>
     </div>
   );
@@ -493,7 +493,7 @@ function AdminShell({ onLogout }: { onLogout: () => void }) {
       {/* ── Footer bar ───────────────────────────────────────────── */}
       <footer data-admin-footer="true" className="px-6 py-3 border-t border-white/[0.05] flex items-center justify-between">
         <span className="text-[10px] text-slate-700 font-mono">CAH-CTRL v2.1 · Secure Session Active</span>
-        <span className="text-[10px] text-slate-700">© {new Date().getFullYear()} Civil At Hand</span>
+        <span className="text-[10px] text-slate-700">© {new Date().getFullYear()} NS Construction</span>
       </footer>
       </div>
     </>

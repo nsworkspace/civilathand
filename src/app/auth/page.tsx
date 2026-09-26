@@ -387,7 +387,7 @@ export default function AuthPage() {
                 Enter it below to verify your email and activate your account.
               </p>
             </div>
-            <p className="text-xs text-slate-500">&copy; {new Date().getFullYear()} Civil At Hand.</p>
+            <p className="text-xs text-slate-500">&copy; {new Date().getFullYear()} NS Construction.</p>
           </div>
         </div>
 
@@ -530,7 +530,7 @@ export default function AuthPage() {
               ))}
             </ul>
           </div>
-          <p className="text-xs text-slate-500">&copy; {new Date().getFullYear()} Civil At Hand. All rights reserved.</p>
+          <p className="text-xs text-slate-500">&copy; {new Date().getFullYear()} NS Construction. All rights reserved.</p>
         </div>
       </div>
 
@@ -548,7 +548,7 @@ export default function AuthPage() {
                 {mode === "signin" ? "Welcome back" : "Create your account"}
               </h1>
               <p className="text-sm text-slate-400 mt-1">
-                {mode === "signin" ? "Sign in to access your dashboard" : "Join Civil At Hand in under a minute"}
+                {mode === "signin" ? "Sign in to access your dashboard" : "Join NS Construction in under a minute"}
               </p>
             </div>
 
@@ -729,7 +729,7 @@ export default function AuthPage() {
           </div>
 
           <p className="text-center text-xs text-slate-500">
-            {mode === "signin" ? "New to Civil At Hand?" : "Already have an account?"}{" "}
+            {mode === "signin" ? "New to NS Construction?" : "Already have an account?"}{" "}
             <button
               type="button"
               onClick={() => { setMode(mode === "signin" ? "signup" : "signin"); setErrorMsg(null); setSuccessMsg(null); }}

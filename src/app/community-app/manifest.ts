@@ -3,9 +3,9 @@ import type { MetadataRoute } from "next";
 export default function manifest(): MetadataRoute.Manifest {
   return {
     id: "/community-app/",
-    name: "Civil At Hand Community",
+    name: "NS Construction Community",
     short_name: "CAH Community",
-    description: "Civil At Hand professional community rooms and conversations.",
+    description: "NS Construction professional community rooms and conversations.",
     start_url: "/community-app/",
     scope: "/community-app/",
     display: "standalone",

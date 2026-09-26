@@ -87,9 +87,9 @@ function Logo() {
   return (
     <div className="flex flex-col items-center mb-6">
       <div className="w-16 h-16 rounded-2xl overflow-hidden ring-2 ring-orange-400/30 shadow-2xl mb-3">
-        <img src="/logo.jpg" alt="Civil At Hand" className="w-full h-full object-cover" />
+        <img src="/logo.jpg" alt="NS Construction" className="w-full h-full object-cover" />
       </div>
-      <span className="text-[11px] font-extrabold text-white uppercase tracking-[0.25em]">Civil At Hand</span>
+      <span className="text-[11px] font-extrabold text-white uppercase tracking-[0.25em]">NS Construction</span>
     </div>
   );
 }
@@ -175,7 +175,7 @@ export default function TeamOnboardingPage() {
           <Lock className="h-6 w-6 text-orange-400" />
         </div>
         <h1 className="text-xl font-extrabold text-white uppercase tracking-wide mb-1">Team Onboarding</h1>
-        <p className="text-white/40 text-xs mb-6 font-medium">Enter the access code shared by Civil At Hand HR.</p>
+        <p className="text-white/40 text-xs mb-6 font-medium">Enter the access code shared by NS Construction HR.</p>
         <input value={codeInput} onChange={e => setCodeInput(e.target.value)}
           className={`${IC} text-center tracking-[0.3em] font-bold text-lg mb-3`} placeholder="ACCESS CODE" />
         <AnimatePresence>
@@ -226,7 +226,7 @@ export default function TeamOnboardingPage() {
           </div>
           <h1 className="text-2xl sm:text-3xl font-extrabold text-white uppercase tracking-wide">Employee Onboarding Form</h1>
           <p className="text-white/40 text-sm mt-2 font-medium max-w-lg mx-auto">
-            Welcome to Civil At Hand! Fill in your details accurately — this forms your official employee record.
+            Welcome to NS Construction! Fill in your details accurately — this forms your official employee record.
           </p>
         </motion.div>
 
@@ -315,7 +315,7 @@ export default function TeamOnboardingPage() {
               </div>
               <input type="checkbox" checked={consent} onChange={e => setConsent(e.target.checked)} className="sr-only" />
               <span className="text-xs text-white/40 leading-relaxed font-medium">
-                I confirm all details are accurate and consent to Civil At Hand storing this as my official employee record, per the{" "}
+                I confirm all details are accurate and consent to NS Construction storing this as my official employee record, per the{" "}
                 <Link href="/privacy-policy" className="text-orange-400 underline underline-offset-2 hover:text-orange-300 transition-colors">Privacy Policy</Link>. <span className="text-orange-400">*</span>
               </span>
             </label>
@@ -344,7 +344,7 @@ export default function TeamOnboardingPage() {
         </motion.div>
 
         <p className="text-center text-white/15 text-[10px] font-medium mt-6">
-          Civil At Hand · Employee Portal · <Link href="/privacy-policy" className="hover:text-orange-400 underline transition-colors">Privacy Policy</Link>
+          NS Construction · Employee Portal · <Link href="/privacy-policy" className="hover:text-orange-400 underline transition-colors">Privacy Policy</Link>
         </p>
       </div>
     </main>

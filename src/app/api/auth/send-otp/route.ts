@@ -52,7 +52,7 @@ function otpEmailHtml(otp: string, name: string): string {
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Your Civil At Hand Verification Code</title>
+  <title>Your NS Construction Verification Code</title>
 </head>
 <body style="margin:0;padding:0;background:#0f172a;font-family:'Segoe UI',Arial,sans-serif;">
   <table width="100%" cellpadding="0" cellspacing="0" style="background:#0f172a;padding:40px 16px;">
@@ -83,12 +83,12 @@ function otpEmailHtml(otp: string, name: string): string {
             </div>
 
             <p style="margin:0 0 24px;font-size:13px;color:#64748b;line-height:1.6;">
-              If you didn't create an account with Civil At Hand, you can safely ignore this email.
+              If you didn't create an account with NS Construction, you can safely ignore this email.
               Never share this code with anyone — our team will <strong style="color:#94a3b8;">never</strong> ask for it.
             </p>
             <hr style="border:none;border-top:1px solid #334155;margin:0 0 24px;" />
             <p style="margin:0;font-size:12px;color:#475569;text-align:center;">
-              &copy; ${new Date().getFullYear()} Civil At Hand : Design &amp; Consultancy<br/>
+              &copy; ${new Date().getFullYear()} NS Construction : Design &amp; Consultancy<br/>
               <a href="mailto:info.civilathand@zohomail.in" style="color:#f97316;text-decoration:none;">info.civilathand@zohomail.in</a>
             </p>
           </td>
@@ -153,11 +153,11 @@ export async function POST(req: NextRequest) {
     // Send email via SMTP
     const transporter = createTransporter();
     await transporter.sendMail({
-      from: `"Civil At Hand" <${process.env.SMTP_USER}>`,
+      from: `"NS Construction" <${process.env.SMTP_USER}>`,
       to: normalizedEmail,
-      subject: `${otp} — Your Civil At Hand Verification Code`,
+      subject: `${otp} — Your NS Construction Verification Code`,
       html: otpEmailHtml(otp, name || ""),
-      text: `Your Civil At Hand verification code is: ${otp}\n\nThis code expires in 10 minutes. Do not share it with anyone.`,
+      text: `Your NS Construction verification code is: ${otp}\n\nThis code expires in 10 minutes. Do not share it with anyone.`,
     });
 
     return NextResponse.json({ success: true, message: "OTP sent." });

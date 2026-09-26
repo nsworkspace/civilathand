@@ -112,7 +112,7 @@ export async function POST(request: Request) {
     try {
       await db.collection("notifications").insertOne({
         id: `notif-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 7)}`,
-        title: "New Civil At Hand Course Enrollment",
+        title: "New NS Construction Course Enrollment",
         message: `${newEnrollment.userName} enrolled in ${newEnrollment.courseName}.`,
         type: "course",
         isAdmin: true,

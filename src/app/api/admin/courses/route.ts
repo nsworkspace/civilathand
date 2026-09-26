@@ -83,7 +83,7 @@ export async function GET() {
     );
   } catch (error: any) {
     console.error("Error fetching admin courses:", error);
-    return NextResponse.json({ error: "Failed to fetch Civil At Hand courses." }, { status: 500 });
+    return NextResponse.json({ error: "Failed to fetch NS Construction courses." }, { status: 500 });
   }
 }
 
@@ -187,8 +187,8 @@ export async function POST(request: Request) {
 
     return NextResponse.json({ success: true, course: courseData });
   } catch (error: any) {
-    console.error("Error saving Civil At Hand course:", error);
-    return NextResponse.json({ error: "Failed to save Civil At Hand course." }, { status: 500 });
+    console.error("Error saving NS Construction course:", error);
+    return NextResponse.json({ error: "Failed to save NS Construction course." }, { status: 500 });
   }
 }
 
@@ -223,9 +223,9 @@ export async function DELETE(request: Request) {
       await db.collection("payment_items").deleteOne({ slug: `course-${slug}` });
     }
 
-    return NextResponse.json({ success: true, message: "Civil At Hand course deleted." });
+    return NextResponse.json({ success: true, message: "NS Construction course deleted." });
   } catch (error: any) {
-    console.error("Error deleting Civil At Hand course:", error);
+    console.error("Error deleting NS Construction course:", error);
     return NextResponse.json({ error: "Failed to delete course." }, { status: 500 });
   }
 }

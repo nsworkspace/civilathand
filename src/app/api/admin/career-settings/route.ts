@@ -24,7 +24,7 @@ const defaultSettings = {
       type: "Internship",
       location: "Remote / Pan-India",
       desc: "Learn on real engineering projects with mentorship — drafting, estimation, and BIM basics.",
-      fullDetails: "Role Overview:\nJoin Civil At Hand as a Civil Engineering Intern. Gain hands-on practical exposure working alongside senior structural engineers and architects.\n\nKey Learning & Responsibilities:\n• Learn 2D drafting in AutoCAD and structural modeling basics in STAAD.Pro / ETABS.\n• Assist in BOQ quantity take-offs, Bar Bending Schedules (BBS), and design detailing.\n• Mentorship sessions, project reviews, and guidance for career & competitive exams.\n\nRequirements:\n• Pursuing or completed B.E. / B.Tech / Diploma in Civil Engineering.\n• Eagerness to learn structural detailing, drafting, and construction technologies.",
+      fullDetails: "Role Overview:\nJoin NS Construction as a Civil Engineering Intern. Gain hands-on practical exposure working alongside senior structural engineers and architects.\n\nKey Learning & Responsibilities:\n• Learn 2D drafting in AutoCAD and structural modeling basics in STAAD.Pro / ETABS.\n• Assist in BOQ quantity take-offs, Bar Bending Schedules (BBS), and design detailing.\n• Mentorship sessions, project reviews, and guidance for career & competitive exams.\n\nRequirements:\n• Pursuing or completed B.E. / B.Tech / Diploma in Civil Engineering.\n• Eagerness to learn structural detailing, drafting, and construction technologies.",
       active: true,
     },
     {
@@ -42,7 +42,7 @@ const defaultSettings = {
       type: "Full-time / Freelance",
       location: "Remote",
       desc: "Web development, Next.js, React, UI design, and interactive civil engineering tools.",
-      fullDetails: "Role Overview:\nLooking for a Web Developer to design, enhance, and optimize web applications, interactive calculators, and client management portals for Civil At Hand.\n\nKey Responsibilities:\n• Develop responsive web applications using React, Next.js, TailwindCSS, and Node.js.\n• Integrate REST APIs, MongoDB databases, and real-time client tools.\n• Optimize web performance, UX/UI animations, and mobile responsiveness.\n\nRequirements:\n• Strong proficiency in React, Next.js, TypeScript, and modern CSS.\n• Experience with Git, API integrations, and clean code practices.",
+      fullDetails: "Role Overview:\nLooking for a Web Developer to design, enhance, and optimize web applications, interactive calculators, and client management portals for NS Construction.\n\nKey Responsibilities:\n• Develop responsive web applications using React, Next.js, TailwindCSS, and Node.js.\n• Integrate REST APIs, MongoDB databases, and real-time client tools.\n• Optimize web performance, UX/UI animations, and mobile responsiveness.\n\nRequirements:\n• Strong proficiency in React, Next.js, TypeScript, and modern CSS.\n• Experience with Git, API integrations, and clean code practices.",
       active: true,
     },
   ],

@@ -46,14 +46,14 @@ export async function generateMetadata(
 
   if (!blog) {
     return {
-      title: "Engineering Blog | Civil At Hand",
-      description: "Civil engineering, structural design, construction and technical insights from Civil At Hand.",
+      title: "Engineering Blog | NS Construction",
+      description: "Civil engineering, structural design, construction and technical insights from NS Construction.",
       robots: { index: false, follow: true },
     };
   }
 
   const title = (blog.seoTitle || blog.title || "Engineering Article").trim();
-  const description = (blog.seoDescription || blog.summary || "Engineering insights from Civil At Hand.").trim();
+  const description = (blog.seoDescription || blog.summary || "Engineering insights from NS Construction.").trim();
   const canonical = blog.canonicalUrl?.trim() || `${SITE_URL}/blog/${blog.slug || slug}`;
   const image = blog.image?.trim() || `${SITE_URL}/hero.jpg`;
 
@@ -71,7 +71,7 @@ export async function generateMetadata(
       publishedTime: blog.date,
       authors: blog.author ? [blog.author] : undefined,
       images: [{ url: image, alt: blog.imageAlt || blog.title || title }],
-      siteName: "Civil At Hand",
+      siteName: "NS Construction",
     },
     twitter: {
       card: "summary_large_image",

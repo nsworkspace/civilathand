@@ -176,7 +176,7 @@ function ResetPasswordForm() {
             </ul>
           </div>
           <p className="text-xs text-slate-500">
-            &copy; {new Date().getFullYear()} Civil At Hand. All rights reserved.
+            &copy; {new Date().getFullYear()} NS Construction. All rights reserved.
           </p>
         </div>
       </div>

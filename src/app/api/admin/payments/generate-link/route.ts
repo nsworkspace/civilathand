@@ -80,7 +80,7 @@ export async function POST(request: Request) {
     const db = client.db(dbName);
     const items = db.collection("payment_items");
     let amount = 0;
-    let description = "Civil At Hand Payment";
+    let description = "NS Construction Payment";
     let notes: Record<string, string> = { source: "civilathand-admin-link" };
     let callback = `${siteUrl}/payment-success`;
     let targetItemSlug: string | null = null;
@@ -90,7 +90,7 @@ export async function POST(request: Request) {
       if (!invoice) return NextResponse.json({ error: "Invoice not found." }, { status: 404 });
       if (invoice.status === "Paid") return NextResponse.json({ error: "This invoice is already paid." }, { status: 400 });
       amount = Number(invoice.amount) || 0;
-      description = `Invoice #${String(invoice.id).toUpperCase()} — ${invoice.projectTitle || "Civil At Hand Service"}`;
+      description = `Invoice #${String(invoice.id).toUpperCase()} — ${invoice.projectTitle || "NS Construction Service"}`;
       notes = { ...notes, type: "invoice", invoiceId: invoice.id, projectId: String(invoice.projectId || "") };
       callback = `${siteUrl}/payment-success?invoiceId=${encodeURIComponent(invoice.id)}`;
     } else {

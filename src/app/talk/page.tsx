@@ -106,7 +106,7 @@ function Bubble({ msg, isMe, showAvatar }: { msg: ChatMsg; isMe: boolean; showAv
       <div className={`flex flex-col max-w-[78%] sm:max-w-[62%] ${isMe ? "items-end" : "items-start"}`}>
         {!isMe && showAvatar && (
           <span className="text-[11px] font-bold text-[#c8942a] ml-1 mb-1 uppercase tracking-wider">
-            Civil At Hand · Support
+            NS Construction · Support
           </span>
         )}
         <div className={`relative rounded-2xl px-4 py-2.5 shadow-sm ${
@@ -343,7 +343,7 @@ export default function TalkPage() {
     <div className="min-h-[100dvh] flex items-center justify-center" style={{ background: "linear-gradient(160deg,#0c1a2e,#163354)" }}>
       <div className="flex flex-col items-center gap-4">
         <div className="w-16 h-16 rounded-2xl overflow-hidden shadow-2xl">
-          <img src="/logo.jpg" alt="Civil At Hand" className="w-full h-full object-cover" />
+          <img src="/logo.jpg" alt="NS Construction" className="w-full h-full object-cover" />
         </div>
         <Loader2 className="h-6 w-6 animate-spin text-[#c8942a]" />
       </div>
@@ -382,7 +382,7 @@ export default function TalkPage() {
             >
               <div className="flex justify-center mb-4">
                 <div className="w-20 h-20 rounded-2xl overflow-hidden shadow-2xl ring-2 ring-[#c8942a]/40">
-                  <img src="/logo.jpg" alt="Civil At Hand" className="w-full h-full object-cover" />
+                  <img src="/logo.jpg" alt="NS Construction" className="w-full h-full object-cover" />
                 </div>
               </div>
               <h1 className="text-3xl font-extrabold text-white tracking-tight">
@@ -578,7 +578,7 @@ export default function TalkPage() {
             </motion.div>
             <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.15 }}
               className="bg-white rounded-2xl px-6 py-4 shadow border border-slate-100 max-w-xs">
-              <p className="font-extrabold text-[#0c1a2e] text-sm tracking-wide uppercase">Civil At Hand Support</p>
+              <p className="font-extrabold text-[#0c1a2e] text-sm tracking-wide uppercase">NS Construction Support</p>
               <p className="text-slate-500 text-xs mt-1.5 leading-relaxed">
                 Hello {visitorName.split(" ")[0]}! 👋 Our engineering team has received your request and will reply shortly — usually within 2 hours.
               </p>
@@ -594,7 +594,7 @@ export default function TalkPage() {
             <div className="flex justify-center mb-4">
               <div className="flex items-center gap-2 bg-white/80 backdrop-blur-sm border border-slate-200 rounded-full px-4 py-1.5 shadow-sm">
                 <Shield className="h-3 w-3 text-[#c8942a] flex-shrink-0" />
-                <span className="text-slate-500 text-[10px] font-semibold">Private conversation with Civil At Hand Engineering</span>
+                <span className="text-slate-500 text-[10px] font-semibold">Private conversation with NS Construction Engineering</span>
               </div>
             </div>
             {grouped.map(group => (

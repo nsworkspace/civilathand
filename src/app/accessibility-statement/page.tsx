@@ -4,8 +4,8 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Accessibility Statement | Civil At Hand",
-  description: "Civil At Hand is committed to making our website accessible to all individuals, including those with disabilities. Read our Accessibility Statement.",
+  title: "Accessibility Statement | NS Construction",
+  description: "NS Construction is committed to making our website accessible to all individuals, including those with disabilities. Read our Accessibility Statement.",
 };
 
 export default function AccessibilityStatementPage() {
@@ -23,7 +23,7 @@ export default function AccessibilityStatementPage() {
               Accessibility Statement
             </h1>
             <div className="mt-4 flex items-center justify-center gap-3 text-xs font-medium text-slate-400">
-              <span>Civil At Hand</span>
+              <span>NS Construction</span>
               <span>•</span>
               <span>civilathan.in</span>
               <span>•</span>
@@ -43,7 +43,7 @@ export default function AccessibilityStatementPage() {
                   <span className="text-orange-500 font-black">1.</span> Our Commitment
                 </h2>
                 <p>
-                  Civil At Hand is committed to providing an inclusive and accessible digital experience for all individuals, including those with disabilities. We strive to ensure that our website <a href="https://civilathan.in" className="text-orange-600 hover:text-orange-700 underline font-semibold">civilathan.in</a> is usable and accessible to as many people as possible, regardless of ability or assistive technology. We continuously work to improve the accessibility of our site in line with recognised standards.
+                  NS Construction is committed to providing an inclusive and accessible digital experience for all individuals, including those with disabilities. We strive to ensure that our website <a href="https://civilathan.in" className="text-orange-600 hover:text-orange-700 underline font-semibold">civilathan.in</a> is usable and accessible to as many people as possible, regardless of ability or assistive technology. We continuously work to improve the accessibility of our site in line with recognised standards.
                 </p>
               </div>
 
@@ -116,7 +116,7 @@ export default function AccessibilityStatementPage() {
                 </p>
                 <div className="space-y-1 text-slate-600 font-medium">
                   <p>
-                    <strong>Civil At Hand</strong> (Nikhil)
+                    <strong>NS Construction</strong> (Nikhil)
                   </p>
                   <p>
                     Email:{" "}

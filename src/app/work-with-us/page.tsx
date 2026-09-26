@@ -81,7 +81,7 @@ const defaultRoles: CareerRole[] = [
     location: "Remote / Pan-India",
     desc: "Learn on real engineering projects with mentorship — drafting, estimation, and BIM basics.",
     fullDetails:
-      "Role Overview:\nJoin Civil At Hand as a Civil Engineering Intern. Gain hands-on practical exposure working alongside senior structural engineers and architects.\n\nKey Learning & Responsibilities:\n• Learn 2D drafting in AutoCAD and structural modeling basics in STAAD.Pro / ETABS.\n• Assist in BOQ quantity take-offs, Bar Bending Schedules (BBS), and design detailing.\n• Mentorship sessions, project reviews, and guidance for career & competitive exams.\n\nRequirements:\n• Pursuing or completed B.E. / B.Tech / Diploma in Civil Engineering.\n• Eagerness to learn structural detailing, drafting, and construction technologies.",
+      "Role Overview:\nJoin NS Construction as a Civil Engineering Intern. Gain hands-on practical exposure working alongside senior structural engineers and architects.\n\nKey Learning & Responsibilities:\n• Learn 2D drafting in AutoCAD and structural modeling basics in STAAD.Pro / ETABS.\n• Assist in BOQ quantity take-offs, Bar Bending Schedules (BBS), and design detailing.\n• Mentorship sessions, project reviews, and guidance for career & competitive exams.\n\nRequirements:\n• Pursuing or completed B.E. / B.Tech / Diploma in Civil Engineering.\n• Eagerness to learn structural detailing, drafting, and construction technologies.",
     active: true,
     applyEnabled: true,
   },
@@ -103,7 +103,7 @@ const defaultRoles: CareerRole[] = [
     location: "Remote",
     desc: "Web development, Next.js, React, UI design, and interactive civil engineering tools.",
     fullDetails:
-      "Role Overview:\nLooking for a Web Developer to design, enhance, and optimize web applications, interactive calculators, and client management portals for Civil At Hand.\n\nKey Responsibilities:\n• Develop responsive web applications using React, Next.js, TailwindCSS, and Node.js.\n• Integrate REST APIs, MongoDB databases, and real-time client tools.\n• Optimize web performance, UX/UI animations, and mobile responsiveness.\n\nRequirements:\n• Strong proficiency in React, Next.js, TypeScript, and modern CSS.\n• Experience with Git, API integrations, and clean code practices.",
+      "Role Overview:\nLooking for a Web Developer to design, enhance, and optimize web applications, interactive calculators, and client management portals for NS Construction.\n\nKey Responsibilities:\n• Develop responsive web applications using React, Next.js, TailwindCSS, and Node.js.\n• Integrate REST APIs, MongoDB databases, and real-time client tools.\n• Optimize web performance, UX/UI animations, and mobile responsiveness.\n\nRequirements:\n• Strong proficiency in React, Next.js, TypeScript, and modern CSS.\n• Experience with Git, API integrations, and clean code practices.",
     active: true,
     applyEnabled: true,
   },
@@ -382,7 +382,7 @@ export default function WorkWithUsPage() {
           <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8 md:py-20">
             <div className="max-w-3xl">
               <span className="inline-flex rounded-full bg-orange-500/15 px-3 py-1 text-[10px] font-extrabold uppercase tracking-widest text-orange-300">
-                Careers at Civil At Hand
+                Careers at NS Construction
               </span>
               <h1 className="mt-5 font-display text-4xl font-extrabold tracking-tight md:text-6xl">
                 Work With Us
@@ -394,7 +394,7 @@ export default function WorkWithUsPage() {
                 <button type="button" onClick={() => scrollToForm()} className="inline-flex items-center gap-2 rounded-xl bg-orange-500 px-5 py-3 text-xs font-extrabold uppercase tracking-wider text-white hover:bg-orange-600">
                   View openings <ArrowRight className="h-4 w-4" />
                 </button>
-                <ShareButton page="/work-with-us" label="Careers at Civil At Hand" />
+                <ShareButton page="/work-with-us" label="Careers at NS Construction" />
               </div>
             </div>
           </div>

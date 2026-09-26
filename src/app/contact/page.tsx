@@ -119,7 +119,7 @@ export default function ContactPage() {
             <div className={`transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}>
               <p className="text-xs font-bold text-orange-400 uppercase tracking-[0.3em] mb-4">Get In Touch</p>
               <h1 className="font-display text-4xl md:text-5xl font-extrabold tracking-tight uppercase leading-tight mb-5">
-                Contact <span className="text-orange-500">Civil At Hand</span>
+                Contact <span className="text-orange-500">NS Construction</span>
               </h1>
               <p className="text-slate-400 text-sm md:text-base font-medium max-w-xl mx-auto leading-relaxed">
                 Share your project and we&apos;ll respond within 24 hours with a scope, timeline and proposal.

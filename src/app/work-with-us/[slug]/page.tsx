@@ -12,7 +12,7 @@ const dbName = process.env.MONGODB_DB || "civil-at-hand";
 
 const fallbackRoles = [
   { id: "role-1", title: "Architect", type: "Freelance", location: "Darbhanga, Bihar", desc: "Seeking an experienced architect in Darbhanga, Bihar, to design a simple residential house.", fullDetails: "Project Requirement: Seeking an experienced architect in Darbhanga, Bihar, to design a simple residential house.", active: true },
-  { id: "role-2", title: "Civil Engineering Intern", type: "Internship", location: "Remote / Pan-India", desc: "Learn on real engineering projects with mentorship — drafting, estimation, and BIM basics.", fullDetails: "Join Civil At Hand as a Civil Engineering Intern and gain hands-on exposure.", active: true },
+  { id: "role-2", title: "Civil Engineering Intern", type: "Internship", location: "Remote / Pan-India", desc: "Learn on real engineering projects with mentorship — drafting, estimation, and BIM basics.", fullDetails: "Join NS Construction as a Civil Engineering Intern and gain hands-on exposure.", active: true },
   { id: "role-3", title: "Labour Contractors", type: "Full-time", location: "Pan-India", desc: "Looking for Labour Contractors & Manpower Suppliers Across India for ongoing construction projects.", fullDetails: "Seeking experienced Labour Contractors, Civil Sub-contractors, and Manpower Suppliers.", active: true },
   { id: "role-4", title: "Web Developer", type: "Full-time / Freelance", location: "Remote", desc: "Web development, Next.js, React, UI design, and interactive civil engineering tools.", fullDetails: "Looking for a Web Developer to design, enhance, and optimize web applications.", active: true },
 ];
@@ -33,9 +33,9 @@ async function getRole(slug: string) {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const role = await getRole(slug);
-  if (!role) return { title: "Job Not Found | Civil At Hand" };
-  const title = role.metaTitle || `${role.title} — Careers at Civil At Hand`;
-  const description = role.metaDescription || role.desc || `Apply for ${role.title} at Civil At Hand.`;
+  if (!role) return { title: "Job Not Found | NS Construction" };
+  const title = role.metaTitle || `${role.title} — Careers at NS Construction`;
+  const description = role.metaDescription || role.desc || `Apply for ${role.title} at NS Construction.`;
   return {
     title,
     description,
