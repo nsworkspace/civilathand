@@ -44,7 +44,7 @@ export function LeadsPanel() {
     setPaymentLeadId(lead.id);
     setPaymentTitle(`${lead.service || "Service"} — Payment Request`);
     setPaymentAmount("");
-    setPaymentDescription(`Payment request for ${lead.service || "Civil At Hand service"}.`);
+    setPaymentDescription(`Payment request for ${lead.service || "NS Construction service"}.`);
     setPaymentResult(null);
   };
 

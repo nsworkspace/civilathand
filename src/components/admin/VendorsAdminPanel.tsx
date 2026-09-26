@@ -296,7 +296,7 @@ export default function VendorsAdminPanel() {
     if (!vendors.length) return notifyAdmin("No vendors to export.");
     const doc = new jsPDF({ orientation: "landscape" });
     doc.setFontSize(18);
-    doc.text("Civil At Hand — Vendor Directory", 14, 18);
+    doc.text("NS Construction — Vendor Directory", 14, 18);
     doc.setFontSize(9);
     doc.text(`Generated: ${new Date().toLocaleString()}`, 14, 25);
     (doc as any).autoTable({

@@ -42,7 +42,7 @@ const MODULE_LABELS: Record<string, string> = {
   services: "Services Management",
   notifications: "Notification Center",
   mentorship: "Mentorship Panel",
-  softwareCourses: "Civil At Hand Courses",
+  softwareCourses: "NS Construction Courses",
   studyMaterials: "Premium Study Materials",
   careers: "Career Applications",
   teamMembers: "Team Members",

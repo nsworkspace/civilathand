@@ -211,7 +211,7 @@ export default function UsersAdminPanel() {
             <Users className="h-5 w-5 text-orange-500" /> Registered User Tracker
           </h3>
           <p className="text-xs text-slate-500 mt-0.5 font-medium">
-            Monitor and manage all user accounts signed up on Civil At Hand.
+            Monitor and manage all user accounts signed up on NS Construction.
           </p>
         </div>
         <div className="flex items-center gap-2">

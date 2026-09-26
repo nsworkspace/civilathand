@@ -42,7 +42,7 @@ const toolsLinks = [
 const communityLinks = [
   { label: "Community", href: "/community", icon: Users },
   { label: "Jobs & careers", href: "/work-with-us", icon: BriefcaseBusiness },
-  { label: "About Civil At Hand", href: "/about", icon: Building2 },
+  { label: "About NS Construction", href: "/about", icon: Building2 },
   { label: "Accessibility", href: "/accessibility-statement", icon: Accessibility },
   { label: "Contact", href: "/contact", icon: Mail },
 ] as const;
@@ -74,9 +74,9 @@ export const Footer: React.FC = () => {
         <div className="relative mx-auto max-w-[1500px] px-5 pb-[calc(22px+env(safe-area-inset-bottom))] pt-10 sm:px-7 sm:pt-12 lg:px-10 lg:pt-14">
           <div className="grid gap-12 lg:grid-cols-[minmax(280px,1.05fr)_minmax(0,2.95fr)] lg:gap-14 xl:gap-20">
             <div className="max-w-[390px]">
-              <Link href="/" aria-label="Civil At Hand home" className="inline-flex items-center gap-4">
+              <Link href="/" aria-label="NS Construction home" className="inline-flex items-center gap-4">
                 <span className="flex h-20 w-20 shrink-0 items-center justify-center overflow-hidden rounded-[22px] bg-white/5 ring-1 ring-white/10 sm:h-[88px] sm:w-[88px]">
-                  <img src="/logo.jpg" alt="Civil At Hand" className="h-full w-full object-cover" />
+                  <img src="/logo.jpg" alt="NS Construction" className="h-full w-full object-cover" />
                 </span>
                 <span>
                   <span className="block font-display text-[26px] font-black leading-none tracking-tight text-white sm:text-[31px]">CIVIL</span>
@@ -105,7 +105,7 @@ export const Footer: React.FC = () => {
             <div className="rounded-2xl border border-white/10 bg-white/[0.025] p-4 sm:p-5">
               <div className="flex items-center gap-4">
                 <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-slate-950/60 text-amber-400"><Phone className="h-6 w-6" /></div>
-                <div><p className="text-base font-extrabold text-white">Install App</p><p className="mt-1 text-xs leading-5 text-slate-400">Keep Civil At Hand one tap away.</p><div className="mt-3"><FooterInstallApp /></div></div>
+                <div><p className="text-base font-extrabold text-white">Install App</p><p className="mt-1 text-xs leading-5 text-slate-400">Keep NS Construction one tap away.</p><div className="mt-3"><FooterInstallApp /></div></div>
               </div>
             </div>
 
@@ -123,7 +123,7 @@ export const Footer: React.FC = () => {
           </div>
 
           <div className="mt-8 grid gap-7 border-t border-white/10 pt-6 lg:grid-cols-[1fr_auto] lg:items-end">
-            <div><p className="text-base font-medium text-slate-100">© {year} Civil At Hand. All rights reserved.</p><p className="mt-2 max-w-[600px] text-xs leading-6 text-slate-400 sm:text-sm">Engineering information is provided for general guidance and does not replace project-specific professional review.</p></div>
+            <div><p className="text-base font-medium text-slate-100">© {year} NS Construction. All rights reserved.</p><p className="mt-2 max-w-[600px] text-xs leading-6 text-slate-400 sm:text-sm">Engineering information is provided for general guidance and does not replace project-specific professional review.</p></div>
             <div className="flex flex-wrap gap-x-6 gap-y-3 text-xs font-semibold text-slate-300 lg:max-w-[720px] lg:justify-end"><Link href="/privacy-policy" className="hover:text-amber-300">Privacy</Link><Link href="/terms-and-conditions" className="hover:text-amber-300">Terms</Link><Link href="/cookie-policy" className="hover:text-amber-300">Cookies</Link><Link href="/accessibility-statement" className="hover:text-amber-300">Accessibility</Link><Link href="/engineering-disclaimer" className="hover:text-amber-300">Disclaimer</Link><button type="button" onClick={() => setShowBugModal(true)} className="hover:text-amber-300">Report an issue</button></div>
           </div>
         </div>

@@ -44,7 +44,7 @@ export default function ShareButton({ page, label, url, title, className = "", c
   const containerRef = React.useRef<HTMLDivElement>(null);
 
   const shareUrl = url || (typeof window !== "undefined" ? window.location.href : "");
-  const shareText = title || label || "Check this out on Civil At Hand";
+  const shareText = title || label || "Check this out on NS Construction";
 
   React.useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {

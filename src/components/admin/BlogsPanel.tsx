@@ -16,7 +16,7 @@ import {
 } from "lucide-react";
 
 const MASTER_BLOG_PROMPT = String.raw`CIVIL AT HAND — MASTER BLOG PROMPT
-You are the Senior Content Writer, SEO Researcher, Technical Editor, and Content Strategist for Civil At Hand, covering civil engineering, construction, infrastructure, Indian Railways, engineering education, government jobs, technical concepts, and careers.
+You are the Senior Content Writer, SEO Researcher, Technical Editor, and Content Strategist for NS Construction, covering civil engineering, construction, infrastructure, Indian Railways, engineering education, government jobs, technical concepts, and careers.
 
 For every topic I provide, create a 100% original, technically accurate, deeply researched, professional, SEO-friendly, publication-ready article.
 
@@ -39,13 +39,13 @@ Create one strong H1 matching the search intent. Use logical H2/H3 headings, sho
 When relevant, prioritise Indian engineering practices, Railways/RRB, SSC JE, government jobs, IS codes, IRC/MoRTH, construction standards, salaries and education. Clearly distinguish Indian and international information where necessary.
 
 7. IMAGES
-Recommend only useful images, normally 1 featured/banner image and 2–4 in-article images. For every image provide Number, Placement, Purpose, Detailed image-generation prompt and Alt text. Every image prompt MUST include: “Realistic professional engineering scene, centered balanced composition, primary subject safely within the central 60–70% of the frame, generous safe margins on both sides, no important subject near the edges, suitable for responsive website cropping on desktop and mobile.” Images must be technically believable, realistic, clean, professionally composed and naturally lit. Do not include Civil At Hand text, logo, website URL, watermark, promotional text, random/fake text, unrealistic engineering or distorted people/machinery. For banner images use a wide horizontal composition with a strong central subject and safe mobile cropping. Alt text must be short, accurate, accessible and descriptive without keyword stuffing.
+Recommend only useful images, normally 1 featured/banner image and 2–4 in-article images. For every image provide Number, Placement, Purpose, Detailed image-generation prompt and Alt text. Every image prompt MUST include: “Realistic professional engineering scene, centered balanced composition, primary subject safely within the central 60–70% of the frame, generous safe margins on both sides, no important subject near the edges, suitable for responsive website cropping on desktop and mobile.” Images must be technically believable, realistic, clean, professionally composed and naturally lit. Do not include NS Construction text, logo, website URL, watermark, promotional text, random/fake text, unrealistic engineering or distorted people/machinery. For banner images use a wide horizontal composition with a strong central subject and safe mobile cropping. Alt text must be short, accurate, accessible and descriptive without keyword stuffing.
 
 8. IMAGE PLACEMENT
 Inside the article, insert only markers such as: ## [IMAGE 1 — INSERT HERE]. Place each marker exactly where the image is most useful. Never put image-generation prompts inside the article.
 
 9. INTERNAL LINKS
-Suggest 3–6 genuinely relevant Civil At Hand article topics. If the exact URL is unknown, do not invent it. Use: Suggested article: [topic]
+Suggest 3–6 genuinely relevant NS Construction article topics. If the exact URL is unknown, do not invent it. Use: Suggested article: [topic]
 
 10. FAQ
 Create 3–6 useful FAQs based on real search intent. Answers must be direct, accurate and concise.
@@ -54,7 +54,7 @@ Create 3–6 useful FAQs based on real search intent. Answers must be direct, ac
 List the important verified sources actually used. Prioritise official and authoritative sources. Clearly separate Verified sources used and Reference material supplied by the user. Never fabricate URLs.
 
 12. CANONICAL URL
-If the exact Civil At Hand domain is unknown, use: [INSERT CIVIL AT HAND BLOG URL]. Never invent the domain.
+If the exact NS Construction domain is unknown, use: [INSERT CIVIL AT HAND BLOG URL]. Never invent the domain.
 
 13. REQUIRED OUTPUT ORDER
 Return exactly these sections in this order:
@@ -109,7 +109,7 @@ FULL ARTICLE CONTENT
 Write the complete, publication-ready article here. Use Markdown H1/H2/H3 headings, short paragraphs, bullets, numbered lists, useful tables, bold emphasis where appropriate and natural keyword usage. Insert image markers where required: ## [IMAGE 1 — INSERT HERE] ## [IMAGE 2 — INSERT HERE] ## [IMAGE 3 — INSERT HERE]. Do not put SEO notes, research notes, image prompts or writing instructions inside the article. FULL ARTICLE CONTENT MUST ALWAYS BE THE LAST SECTION. NOTHING MAY APPEAR AFTER IT.
 
 14. FINAL QUALITY CHECK
-Before answering, silently verify: research is current and reliable; no invented facts or sources; technical details, formulas, units and standards are correct; search intent is satisfied; SEO is natural; writing is original and professional; no copied/closely paraphrased material; article is complete but not unnecessarily long; images are realistic and technically believable; subjects stay within the central 60–70% safe area; no Civil At Hand branding inside images; image markers are correctly placed; article is mobile-friendly; Full Article Content is last.
+Before answering, silently verify: research is current and reliable; no invented facts or sources; technical details, formulas, units and standards are correct; search intent is satisfied; SEO is natural; writing is original and professional; no copied/closely paraphrased material; article is complete but not unnecessarily long; images are realistic and technically believable; subjects stay within the central 60–70% safe area; no NS Construction branding inside images; image markers are correctly placed; article is mobile-friendly; Full Article Content is last.
 
 BLOG INPUT
 Topic:
@@ -361,7 +361,7 @@ export function BlogsPanel() {
       await navigator.clipboard.writeText(MASTER_BLOG_PROMPT);
       notifyAdmin("Master Blog Prompt copied. Paste it into your AI tool and then paste the result here.");
     } catch {
-      window.prompt("Copy the Civil At Hand Master Blog Prompt:", MASTER_BLOG_PROMPT);
+      window.prompt("Copy the NS Construction Master Blog Prompt:", MASTER_BLOG_PROMPT);
     }
   };
 
@@ -1184,7 +1184,7 @@ export function BlogsPanel() {
                           <button type="button" onMouseDown={(e) => e.preventDefault()} onClick={() => runCommand("undo")} className="p-1 rounded hover:bg-slate-200" title="Undo"><Undo2 className="h-3.5 w-3.5" /></button>
                           <button type="button" onMouseDown={(e) => e.preventDefault()} onClick={() => runCommand("redo")} className="p-1 rounded hover:bg-slate-200" title="Redo"><Redo2 className="h-3.5 w-3.5" /></button>
                           <button type="button" onMouseDown={(e) => e.preventDefault()} onClick={() => autoFormatArticle()} className="inline-flex items-center gap-1 rounded bg-orange-100 px-2 py-1 text-[9px] font-extrabold uppercase tracking-wide text-orange-700 hover:bg-orange-200" title="Automatically structure pasted AI content"><WandSparkles className="h-3 w-3" /> Auto Format</button>
-                            <button type="button" onClick={copyMasterBlogPrompt} className="inline-flex items-center gap-1 rounded bg-slate-100 px-2 py-1 text-[9px] font-extrabold uppercase tracking-wide text-slate-700 hover:bg-slate-200" title="Copy the Civil At Hand Master Blog Prompt for AI"><Copy className="h-3 w-3" /> Copy AI Prompt</button>
+                            <button type="button" onClick={copyMasterBlogPrompt} className="inline-flex items-center gap-1 rounded bg-slate-100 px-2 py-1 text-[9px] font-extrabold uppercase tracking-wide text-slate-700 hover:bg-slate-200" title="Copy the NS Construction Master Blog Prompt for AI"><Copy className="h-3 w-3" /> Copy AI Prompt</button>
                           <div className="h-4 w-[1px] bg-slate-300 mx-1 flex-shrink-0" />
                             <button
                               type="button"

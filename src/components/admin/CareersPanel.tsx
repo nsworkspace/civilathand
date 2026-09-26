@@ -185,7 +185,7 @@ export function CareersPanel() {
       const { jsPDF } = await import("jspdf");
       const doc = new jsPDF();
       const lines = [
-        "Civil At Hand — Career Application",
+        "NS Construction — Career Application",
         "",
         `Name: ${app.name || ""}`,
         `Role: ${app.role || "General Position"}`,
@@ -219,7 +219,7 @@ export function CareersPanel() {
       apps.forEach((app, index) => {
         if (index > 0) doc.addPage();
         const lines = [
-          "Civil At Hand — Career Application",
+          "NS Construction — Career Application",
           "",
           `Name: ${app.name || ""}`,
           `Role: ${app.role || "General Position"}`,

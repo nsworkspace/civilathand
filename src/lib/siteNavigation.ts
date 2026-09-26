@@ -5,12 +5,11 @@ export type SiteNavItem = {
 };
 export type SiteNavigation = { items: SiteNavItem[]; updatedAt?: string };
 export const DEFAULT_SITE_NAV: SiteNavItem[] = [
-  { id: "tools", label: "Tools", href: "/calculators", help: "Engineering calculators and technical utilities", icon: "Calculator", visible: true },
   { id: "careers", label: "Careers", href: "/work-with-us", help: "Jobs and professional opportunities", icon: "BriefcaseBusiness", visible: true },
   { id: "case-studies", label: "Case studies", href: "/portfolio", help: "Projects and engineering examples", icon: "Layers3", visible: true },
   { id: "insights", label: "Insights", href: "/blog", help: "Industry news, guides and engineering knowledge", icon: "Newspaper", visible: true },
   { id: "community", label: "Community", href: "/community", help: "Professional civil & architecture community", icon: "Users", visible: true },
-  { id: "about", label: "About", href: "/about", help: "About Civil At Hand", icon: "Globe2", visible: true },
+  { id: "about", label: "About", href: "/about", help: "About NS Construction", icon: "Globe2", visible: true },
 ];
 const dbName = process.env.MONGODB_DB || "civil-at-hand";
 export async function getSiteNavigation(): Promise<SiteNavigation> {

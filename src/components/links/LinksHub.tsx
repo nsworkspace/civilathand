@@ -17,11 +17,9 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import {
-  Calculator,
   Image as ImageIcon,
   Mail,
   GraduationCap,
-  ClipboardList,
   ArrowUpRight,
   Copy,
   Check,
@@ -40,7 +38,6 @@ import {
 // SHEET 1 — real pages on this site (internal Next.js routes)
 // ------------------------------------------------------------
 const SITE_LINKS = [
-  { label: "Engineering Calculators", desc: "Civil engineering unit conversion and concrete material calculations", href: "/calculators", icon: Calculator },
   { label: "Project Portfolio", desc: "Completed work & case studies", href: "/portfolio", icon: ImageIcon },
   { label: "Get In Touch", desc: "Start a project with us", href: "/contact", icon: Mail },
 ];
@@ -50,7 +47,6 @@ const SITE_LINKS = [
 // ------------------------------------------------------------
 const EDUCATION_LINKS = [
   { label: "1-on-1 Mentorship", desc: "Learn from a GATE/ESE/SSC-JE topper", href: "/mentorship", icon: GraduationCap },
-  { label: "Courses", desc: "AutoCAD, estimation & more", href: "/education/courses", icon: ClipboardList },
 ];
 
 // ------------------------------------------------------------
@@ -237,7 +233,7 @@ export default function LinksHub() {
 
         {/* ---------------- Sheet 2: education ---------------- */}
         <section className="w-full mb-9">
-          <SheetLabel index={2} total={3} title="Civil At Hand Education" />
+          <SheetLabel index={2} total={3} title="NS Construction Education" />
           <div className="grid grid-cols-1 gap-2.5">
             {EDUCATION_LINKS.map((l) => (
               <LinkCard key={l.href} href={l.href} label={l.label} desc={l.desc} icon={l.icon} />

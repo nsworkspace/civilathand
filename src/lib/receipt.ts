@@ -25,7 +25,7 @@ function safeFilePart(value: string) {
 }
 
 /**
- * Generates a branded Civil At Hand receipt directly in the browser.
+ * Generates a branded NS Construction receipt directly in the browser.
  * No payment secrets are exposed; only the user's own purchase record is
  * passed from the authenticated profile page.
  */
@@ -46,7 +46,7 @@ export function downloadReceipt(receipt: ReceiptLike, buyer?: { name?: string; e
   doc.setTextColor(255, 255, 255);
   doc.setFont("helvetica", "bold");
   doc.setFontSize(20);
-  doc.text("Civil At Hand", margin, 17);
+  doc.text("NS Construction", margin, 17);
   doc.setFontSize(9);
   doc.setFont("helvetica", "normal");
   doc.text("Structural & Civil Engineering", margin, 24);
@@ -69,7 +69,7 @@ export function downloadReceipt(receipt: ReceiptLike, buyer?: { name?: string; e
   doc.text("BILLED TO", margin, 64);
   doc.setFont("helvetica", "bold");
   doc.setFontSize(12);
-  doc.text(buyer?.name || "Civil At Hand Customer", margin, 71);
+  doc.text(buyer?.name || "NS Construction Customer", margin, 71);
   doc.setFont("helvetica", "normal");
   doc.setFontSize(9);
   doc.setTextColor(71, 85, 105);
@@ -88,7 +88,7 @@ export function downloadReceipt(receipt: ReceiptLike, buyer?: { name?: string; e
 
   doc.setTextColor(15, 23, 42);
   doc.setFontSize(12);
-  doc.text(receipt.title || "Civil At Hand Purchase", margin + 7, cardY + 19);
+  doc.text(receipt.title || "NS Construction Purchase", margin + 7, cardY + 19);
 
   doc.setFont("helvetica", "normal");
   doc.setFontSize(9);
@@ -130,7 +130,7 @@ export function downloadReceipt(receipt: ReceiptLike, buyer?: { name?: string; e
   doc.line(margin, 255, pageWidth - margin, 255);
   doc.setFontSize(8);
   doc.setTextColor(100, 116, 139);
-  doc.text("This is a system-generated receipt from Civil At Hand.", margin, 264);
+  doc.text("This is a system-generated receipt from NS Construction.", margin, 264);
   doc.text("Keep this receipt for your records. Access remains linked to your verified account.", margin, 270);
   doc.text("Support: info.civilathand@zohomail.in", margin, 276);
   doc.setFont("helvetica", "bold");

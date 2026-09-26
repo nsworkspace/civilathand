@@ -177,7 +177,7 @@ export default function RazorpayCheckout({
         key: orderData.keyId,
         amount: orderData.amount,
         currency: orderData.currency,
-        name: "Civil At Hand",
+        name: "NS Construction",
         description: orderData.description,
         order_id: orderData.orderId,
         prefill,

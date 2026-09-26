@@ -2,7 +2,7 @@
 
 /**
  * AnalyticsDashboard — Enhanced Admin Analytics Panel
- * Civil At Hand · Ultimate Business Intelligence Module
+ * NS Construction · Ultimate Business Intelligence Module
  *
  * Features:
  * • Real-time KPI cards (Revenue, Clients, Projects, Leads, Blog, Traffic, Conversions)
@@ -483,7 +483,7 @@ async function downloadAnalyticsPDF(data: {
   }
 
   // ── PAGE 1: Cover + Executive KPIs ──────────────────────────────────────────
-  let y = header(0, "Business Analytics Report", "Executive Intelligence Dashboard · Civil At Hand");
+  let y = header(0, "Business Analytics Report", "Executive Intelligence Dashboard · NS Construction");
 
   // Health score badge
   const hs = data.healthScore;
@@ -495,7 +495,7 @@ async function downloadAnalyticsPDF(data: {
 
   // Intro
   doc.setFontSize(9); doc.setFont("helvetica", "normal"); doc.setTextColor(...medGray);
-  const intro = `This report covers all key business metrics for Civil At Hand including revenue performance, client activity, project pipeline, content analytics, and website engagement data compiled from live MongoDB data.`;
+  const intro = `This report covers all key business metrics for NS Construction including revenue performance, client activity, project pipeline, content analytics, and website engagement data compiled from live MongoDB data.`;
   const introLines = doc.splitTextToSize(intro, W - 28);
   doc.text(introLines, 14, y + 5);
   y += introLines.length * 5 + 12;
@@ -1294,7 +1294,7 @@ export function AnalyticsDashboard({
       <div className="flex items-center justify-center gap-2 py-4 border-t border-slate-100">
         <span className="flex h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
         <span className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.2em]">
-          All data sourced live from MongoDB · Civil At Hand Analytics Engine
+          All data sourced live from MongoDB · NS Construction Analytics Engine
         </span>
       </div>
     </motion.div>

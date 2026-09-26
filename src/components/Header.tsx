@@ -168,8 +168,8 @@ export const Header: React.FC = () => {
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className={`flex items-center justify-between gap-4 transition-[min-height] duration-300 ${scrolled ? "min-h-14" : "min-h-16 lg:min-h-[68px]"}`}>
-          <Link href="/" className="flex min-w-0 items-center gap-3" aria-label="Civil At Hand home">
-            <span className={`flex shrink-0 items-center justify-center overflow-hidden rounded-xl border border-slate-200/60 bg-white shadow-sm transition-[width,height] duration-300 ${scrolled ? "h-9 w-9" : "h-10 w-10 lg:h-11 lg:w-11"}`}><img src="/logo.jpg" alt="Civil At Hand logo" className="h-full w-full object-cover" /></span>
+          <Link href="/" className="flex min-w-0 items-center gap-3" aria-label="NS Construction home">
+            <span className={`flex shrink-0 items-center justify-center overflow-hidden rounded-xl border border-slate-200/60 bg-white shadow-sm transition-[width,height] duration-300 ${scrolled ? "h-9 w-9" : "h-10 w-10 lg:h-11 lg:w-11"}`}><img src="/logo.jpg" alt="NS Construction logo" className="h-full w-full object-cover" /></span>
             <span className="min-w-0">
               <span className={`block truncate font-display font-extrabold tracking-tight transition-[font-size] duration-300 ${scrolled ? "text-base" : "text-lg"} text-wix-dark`}>CIVIL <span className="text-orange-500">AT HAND</span></span>
               <span className={`block text-[10px] font-semibold tracking-wide text-slate-500 transition-opacity duration-300 ${scrolled ? "hidden lg:block" : "block"}`}>Engineering made simpler</span>

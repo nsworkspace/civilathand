@@ -94,7 +94,7 @@ export default function FeedbackForm({ lockType }: { lockType?: FeedbackType } =
           <p className="text-slate-400 text-sm mt-2">
             {lockType === "bug"
               ? "Found something broken? Tell us exactly what happened so we can fix it fast."
-              : "Found something broken? Have an idea to make Civil At Hand better? Tell us directly."}
+              : "Found something broken? Have an idea to make NS Construction better? Tell us directly."}
           </p>
         </div>
 
@@ -166,7 +166,7 @@ export default function FeedbackForm({ lockType }: { lockType?: FeedbackType } =
                 ? "Describe the bug — what happened, and what page were you on?"
                 : type === "review"
                 ? "Tell us about your experience..."
-                : "What would make Civil At Hand better?"
+                : "What would make NS Construction better?"
             }
             value={message}
             onChange={e => setMessage(e.target.value)}

@@ -1281,7 +1281,7 @@ export const ProjectProvider: React.FC<{ children: React.ReactNode }> = ({ child
               ? "We offer automated estimations using our Construction Cost Calculator on the homepage. If you upload your floor plan PDF, our engineering experts will audit and return a detailed custom quotation within 24 hours."
               : text.toLowerCase().includes("drawing") || text.toLowerCase().includes("upload")
               ? "You can upload PDF, DWG, or DXF files directly in the 'Upload Drawings' tab on your dashboard. Once uploaded, they go through our automated analyzer, followed by expert audit review."
-              : "Thank you for reaching out to Civil At Hand. One of our structural engineers will review your request and get back to you shortly.";
+              : "Thank you for reaching out to NS Construction. One of our structural engineers will review your request and get back to you shortly.";
 
           try {
             const replyRes = await fetch("/api/support-messages", {

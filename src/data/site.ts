@@ -7,13 +7,13 @@
 const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || "https://www.civilathand.in").replace(/\/$/, "");
 
 export const SITE = {
-  name: "Civil At Hand",
-  legalName: "Civil At Hand — Civil & Architecture Learning Platform",
-  tagline: "Learn. Practice. Build your civil & architecture career.",
+  name: "NS Construction",
+  legalName: "NS Construction — Civil Engineering & Infrastructure Company",
+  tagline: "Building infrastructure you can trust.",
   description:
-    "Civil At Hand is a practical civil engineering and architecture platform for students, professionals and job seekers, with courses, study materials, engineering calculators, mentorship, careers, industry blogs and case studies.",
+    "NS Construction is a civil engineering and infrastructure company delivering construction, project execution and engineering services, with industry blogs and project case studies.",
   shortDescription:
-    "Learn civil engineering and architecture through practical courses, tools, study material, mentorship, careers and industry knowledge.",
+    "A civil engineering and construction company delivering reliable infrastructure, projects and engineering services.",
   url: SITE_URL,
   logo: `${SITE_URL}/logo.jpg`,
 
@@ -27,7 +27,7 @@ export const SITE = {
   // Location
   address: { region: "Haryana", country: "IN", countryName: "India" },
   areaServed: "India",
-  priceRange: "Free + paid learning resources",
+  priceRange: "Project-based pricing",
   foundingYear: 2024,
 
   // Social profiles (used for SEO "sameAs" + footer)

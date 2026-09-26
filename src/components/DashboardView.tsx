@@ -415,7 +415,7 @@ export const DashboardView: React.FC = () => {
                 <span className="text-[9px] font-extrabold px-1.5 py-0.5 rounded-md bg-amber-500 text-white">NEW</span>
               )}
             </p>
-            <p className="text-[11px] text-slate-400 font-medium mt-0.5">Sent to you by Civil At Hand — tap to view details</p>
+            <p className="text-[11px] text-slate-400 font-medium mt-0.5">Sent to you by NS Construction — tap to view details</p>
           </div>
           <ArrowRight className="h-4 w-4 text-slate-400 group-hover:text-orange-400 group-hover:translate-x-0.5 transition-all flex-shrink-0" />
         </Link>
@@ -1104,7 +1104,7 @@ export const DashboardView: React.FC = () => {
                     <div className="flex items-center justify-between">
                       <div>
                         <p className="text-[10px] font-extrabold uppercase tracking-widest text-orange-600">Service Payment Requests</p>
-                        <p className="text-xs text-slate-500 mt-1">Secure payment requests sent to your account by Civil At Hand.</p>
+                        <p className="text-xs text-slate-500 mt-1">Secure payment requests sent to your account by NS Construction.</p>
                       </div>
                     </div>
                     {servicePaymentRequests.map((request) => (

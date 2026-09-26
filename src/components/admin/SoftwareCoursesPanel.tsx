@@ -34,12 +34,12 @@ export function SoftwareCoursesPanel() {
   const loadAdminCourses = async () => {
     try {
       const res = await fetch("/api/admin/courses");
-      if (!res.ok) throw new Error("Failed to load Civil At Hand courses");
+      if (!res.ok) throw new Error("Failed to load NS Construction courses");
       const data = await res.json();
       setAdminCourses(data.courses || []);
       setCoursesLoaded(true);
     } catch (err) {
-      console.error("Error loading Civil At Hand courses:", err);
+      console.error("Error loading NS Construction courses:", err);
     }
   };
 
@@ -172,7 +172,7 @@ export function SoftwareCoursesPanel() {
     >
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 border-b border-slate-100 pb-4">
         <div>
-          <h3 className="font-display font-extrabold text-xl text-navy-950">Civil At Hand Courses Management</h3>
+          <h3 className="font-display font-extrabold text-xl text-navy-950">NS Construction Courses Management</h3>
           <p className="text-xs text-slate-500 mt-0.5">Only courses added from this Admin panel are listed here and published. Demo/catalog courses are removed.</p>
         </div>
         <button
@@ -180,7 +180,7 @@ export function SoftwareCoursesPanel() {
           onClick={openAddCourse}
           className="flex items-center gap-1.5 bg-navy-950 hover:bg-orange-600 text-white font-bold px-4 py-2 rounded-xl text-[11px] uppercase tracking-wider transition-all cursor-pointer shadow-premium"
         >
-          <Plus className="h-4 w-4" /> Add Civil At Hand Course
+          <Plus className="h-4 w-4" /> Add NS Construction Course
         </button>
       </div>
       {!coursesLoaded ? (
@@ -190,7 +190,7 @@ export function SoftwareCoursesPanel() {
       ) : adminCourses.length === 0 ? (
         <div className="text-center py-16 border-2 border-dashed border-slate-200 rounded-2xl">
           <Laptop className="h-10 w-10 text-slate-300 mx-auto mb-3" />
-          <p className="text-sm font-semibold text-slate-400">No Civil At Hand courses found.</p>
+          <p className="text-sm font-semibold text-slate-400">No NS Construction courses found.</p>
           <button onClick={openAddCourse} className="mt-3 text-xs font-bold text-orange-600 underline">Add First Course</button>
         </div>
       ) : (
@@ -273,7 +273,7 @@ export function SoftwareCoursesPanel() {
         <div className="mt-8 bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm">
           <div className="px-5 py-4 border-b border-slate-100 flex items-center justify-between gap-3">
             <div>
-              <h4 className="font-display text-sm font-extrabold text-navy-950 uppercase tracking-wider">Paid Civil At Hand Course Enrolments</h4>
+              <h4 className="font-display text-sm font-extrabold text-navy-950 uppercase tracking-wider">Paid NS Construction Course Enrolments</h4>
               <p className="text-[10px] text-slate-500 mt-1">Details submitted after verified payment. These records are server-side and tied to the buyer account.</p>
             </div>
             
@@ -313,7 +313,7 @@ export function SoftwareCoursesPanel() {
               <div className="sticky top-0 z-20 px-6 py-4 bg-navy-950 text-white flex justify-between items-center rounded-t-2xl">
                 <div>
                   <h4 className="font-display font-extrabold text-sm uppercase tracking-wider">
-                    {editingCourseId ? "Edit Civil At Hand Course" : "Add New Civil At Hand Course"}
+                    {editingCourseId ? "Edit NS Construction Course" : "Add New NS Construction Course"}
                   </h4>
                   <p className="text-[10px] text-slate-400 mt-0.5">Changes saved here update the database and reflect live on the website.</p>
                 </div>

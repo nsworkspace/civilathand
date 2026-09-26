@@ -389,7 +389,7 @@ export function MentorshipPanel() {
                                 </button>
                                 <a
                                   href={`https://wa.me/${(app.phone || "").replace(/[^0-9]/g, "")}?text=${encodeURIComponent(
-                                    `Hi ${app.name}, I reviewed your application for Civil At Hand Mentorship targeting ${app.fieldOfStudy}. Let's schedule a call to discuss your goals!`
+                                    `Hi ${app.name}, I reviewed your application for NS Construction Mentorship targeting ${app.fieldOfStudy}. Let's schedule a call to discuss your goals!`
                                   )}`}
                                   target="_blank"
                                   rel="noopener noreferrer"
@@ -640,7 +640,7 @@ export function MentorshipPanel() {
                 <section className="rounded-xl border border-slate-200 bg-slate-50 p-4 space-y-3">
                   <div><h5 className="font-extrabold text-sm text-slate-900">SEO & Social Preview</h5><p className="text-[10px] text-slate-500 mt-1">Optional. Empty fields keep the existing page defaults.</p></div>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                    <label><span className="block text-[9px] font-extrabold uppercase tracking-wider text-slate-500 mb-1">SEO title</span><input value={mSeo.title} onChange={(e) => setMSeo(v => ({...v, title:e.target.value}))} maxLength={70} className="w-full bg-white border border-slate-300 rounded-lg px-3 py-2.5 text-xs font-semibold" placeholder="Mentorship | Civil At Hand" /></label>
+                    <label><span className="block text-[9px] font-extrabold uppercase tracking-wider text-slate-500 mb-1">SEO title</span><input value={mSeo.title} onChange={(e) => setMSeo(v => ({...v, title:e.target.value}))} maxLength={70} className="w-full bg-white border border-slate-300 rounded-lg px-3 py-2.5 text-xs font-semibold" placeholder="Mentorship | NS Construction" /></label>
                     <label><span className="block text-[9px] font-extrabold uppercase tracking-wider text-slate-500 mb-1">Canonical URL</span><input value={mSeo.canonicalUrl} onChange={(e) => setMSeo(v => ({...v, canonicalUrl:e.target.value}))} className="w-full bg-white border border-slate-300 rounded-lg px-3 py-2.5 text-xs font-semibold" placeholder="https://civilathand.com/mentorship" /></label>
                     <label className="md:col-span-2"><span className="block text-[9px] font-extrabold uppercase tracking-wider text-slate-500 mb-1">Meta description</span><textarea value={mSeo.description} onChange={(e) => setMSeo(v => ({...v, description:e.target.value}))} maxLength={180} rows={2} className="w-full bg-white border border-slate-300 rounded-lg px-3 py-2.5 text-xs font-medium resize-y" placeholder="Short search result description…" /></label>
                     <label className="md:col-span-2"><span className="block text-[9px] font-extrabold uppercase tracking-wider text-slate-500 mb-1">Keywords</span><input value={mSeo.keywords} onChange={(e) => setMSeo(v => ({...v, keywords:e.target.value}))} className="w-full bg-white border border-slate-300 rounded-lg px-3 py-2.5 text-xs font-semibold" placeholder="GATE mentorship, IES mentor, SSC JE guidance" /></label>

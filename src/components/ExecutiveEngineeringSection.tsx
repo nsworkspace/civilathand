@@ -18,7 +18,7 @@ export default function ExecutiveEngineeringSection({ compact = false }: { compa
             </h2>
           </div>
           <p className="max-w-2xl text-sm leading-7 text-slate-600 sm:text-base">
-            Civil At Hand is structured around the way real projects move: understand the problem, assess the information, engineer the solution, coordinate the interfaces and deliver documentation people can actually use.
+            NS Construction is structured around the way real projects move: understand the problem, assess the information, engineer the solution, coordinate the interfaces and deliver documentation people can actually use.
           </p>
         </div>
 
@@ -49,7 +49,7 @@ export default function ExecutiveEngineeringSection({ compact = false }: { compa
             <div className="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm md:p-9">
               <span className="text-[10px] font-extrabold uppercase tracking-[.2em] text-orange-600">Digital engineering</span>
               <h3 className="mt-2 font-display text-2xl font-extrabold text-wix-dark">Technology should remove friction.</h3>
-              <p className="mt-3 text-sm leading-6 text-slate-500">The benchmark firms increasingly connect technical expertise with digital workflows, project information and lifecycle delivery. Civil At Hand can present that same discipline without making technology the story itself.</p>
+              <p className="mt-3 text-sm leading-6 text-slate-500">The benchmark firms increasingly connect technical expertise with digital workflows, project information and lifecycle delivery. NS Construction can present that same discipline without making technology the story itself.</p>
               <div className="mt-6 grid gap-3 sm:grid-cols-2">{digitalCapabilities.slice(0, 6).map(item => { const Icon = item.icon; return <div key={item.title} className="rounded-xl border border-slate-100 bg-slate-50 p-4"><Icon className="h-4 w-4 text-orange-500" /><h4 className="mt-3 text-xs font-extrabold text-wix-dark">{item.title}</h4><p className="mt-1 text-[10px] leading-5 text-slate-500">{item.description}</p></div>; })}</div>
               <Link href="/technology" className="mt-6 inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-widest text-wix-dark hover:text-orange-600">Explore digital engineering <ArrowRight className="h-4 w-4" /></Link>
             </div>

@@ -54,7 +54,7 @@ export function buildProposalHtml(proposal: ProposalLike): string {
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <base href="${origin}/" />
-<title>Proposal ${proposalNo} · Civil At Hand</title>
+<title>Proposal ${proposalNo} · NS Construction</title>
 <style>
   * { box-sizing: border-box; }
   body {
@@ -102,7 +102,7 @@ export function buildProposalHtml(proposal: ProposalLike): string {
     </div>
     <div style="text-align:right;">
       <h4>Prepared By</h4>
-      <p>Civil At Hand — Design &amp; Consultancy<br/>info.civilathand@zohomail.in</p>
+      <p>NS Construction — Design &amp; Consultancy<br/>info.civilathand@zohomail.in</p>
     </div>
   </div>
 
@@ -121,7 +121,7 @@ export function buildProposalHtml(proposal: ProposalLike): string {
 
   ${proposal.notes ? `<div class="notes">${escapeHtml(proposal.notes)}</div>` : ""}
 
-  <div class="footer">This proposal is issued by Civil At Hand and is subject to mutual confirmation before work begins.</div>
+  <div class="footer">This proposal is issued by NS Construction and is subject to mutual confirmation before work begins.</div>
 </body>
 </html>`;
 }

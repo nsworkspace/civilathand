@@ -12,7 +12,6 @@ const dbName = process.env.MONGODB_DB || "civil-at-hand";
 export const EXISTING_MANAGED_PAGES = [
   { slug: "home", path: "/", title: "Home" }, { slug: "expertise", path: "/expertise", title: "Expertise" },
   { slug: "sectors", path: "/sectors", title: "Sectors" }, { slug: "technology", path: "/technology", title: "Technology" },
-  { slug: "insights", path: "/insights", title: "Insights" }, { slug: "ai-insights", path: "/ai-insights", title: "AI Insights" },
   { slug: "pricing", path: "/pricing", title: "Pricing" }, { slug: "project-planner", path: "/project-planner", title: "Project Planner" },
   { slug: "faq", path: "/faq", title: "FAQ" }, { slug: "about", path: "/about", title: "About" },
   { slug: "contact", path: "/contact", title: "Contact" }, { slug: "services", path: "/services", title: "Services" },

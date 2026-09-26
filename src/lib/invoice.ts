@@ -2,7 +2,7 @@
  * Shared premium invoice template + download/share helpers.
  * Used by both the client Dashboard ("My Invoices") and the Admin Panel
  * ("Billing & Invoicing") so every invoice generated anywhere in the app
- * looks identical, professional, and carries the Civil At Hand brand.
+ * looks identical, professional, and carries the NS Construction brand.
  */
 
 export interface InvoiceLike {
@@ -21,7 +21,7 @@ export interface InvoiceRenderOptions {
 }
 
 const CURRENCY = (n: number) => `₹${Number(n || 0).toLocaleString("en-IN")}`;
-const BUSINESS_NAME = "Civil At Hand";
+const BUSINESS_NAME = "NS Construction";
 const BUSINESS_TAGLINE = "Structural & Civil Engineering";
 const BUSINESS_DOMAIN = "civilathan.in";
 const BUSINESS_URL = "https://civilathan.in";
@@ -30,7 +30,7 @@ const BUSINESS_LOCATION = "Haryana, India";
 
 /**
  * Builds a full, self-contained, print-ready HTML document for an invoice.
- * Includes the Civil At Hand logo, a clean two-column layout, a status
+ * Includes the NS Construction logo, a clean two-column layout, a status
  * watermark, and a footer — designed to look good both on screen and when
  * saved as a PDF via the browser print dialog.
  */
@@ -46,7 +46,7 @@ export function buildInvoiceHtml(inv: InvoiceLike, opts: InvoiceRenderOptions = 
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <base href="${origin}/" />
-<title>Invoice ${invoiceNo} · Civil At Hand</title>
+<title>Invoice ${invoiceNo} · NS Construction</title>
 <style>
   * { box-sizing: border-box; }
   body {
@@ -164,7 +164,7 @@ export function buildInvoiceHtml(inv: InvoiceLike, opts: InvoiceRenderOptions = 
     <div class="watermark">${isPaid ? "PAID" : "UNPAID"}</div>
     <div class="header">
       <div class="brand">
-        <img src="/logo.jpg" alt="Civil At Hand" />
+        <img src="/logo.jpg" alt="NS Construction" />
         <div>
           <div class="brand-name">${BUSINESS_NAME}</div>
           <div class="brand-tag">${BUSINESS_TAGLINE}</div>
@@ -228,10 +228,10 @@ export function buildInvoiceHtml(inv: InvoiceLike, opts: InvoiceRenderOptions = 
 
     <div class="footer">
       <div>
-        <p class="thanks">Thank you for choosing Civil At Hand.</p>
+        <p class="thanks">Thank you for choosing NS Construction.</p>
         <p>This is a system-generated invoice and does not require a signature.</p>
       </div>
-      <p>For queries, contact Civil At Hand support.</p>
+      <p>For queries, contact NS Construction support.</p>
     </div>
   </div>
   <script>window.onload = function () { window.print(); };</script>
@@ -261,7 +261,7 @@ export function downloadInvoice(inv: InvoiceLike, opts: InvoiceRenderOptions = {
  */
 export async function shareInvoice(inv: InvoiceLike, opts: InvoiceRenderOptions = {}): Promise<void> {
   const invoiceNo = `#${inv.id.toUpperCase()}`;
-  const summary = `Civil At Hand — Invoice ${invoiceNo}\nProject: ${inv.projectTitle}\nAmount: ${CURRENCY(inv.amount)}\nStatus: ${inv.status}\nDue: ${inv.dueDate}${inv.paymentLink ? `\nPay here: ${inv.paymentLink}` : ""}`;
+  const summary = `NS Construction — Invoice ${invoiceNo}\nProject: ${inv.projectTitle}\nAmount: ${CURRENCY(inv.amount)}\nStatus: ${inv.status}\nDue: ${inv.dueDate}${inv.paymentLink ? `\nPay here: ${inv.paymentLink}` : ""}`;
 
   try {
     const html = buildInvoiceHtml(inv, opts);
@@ -269,7 +269,7 @@ export async function shareInvoice(inv: InvoiceLike, opts: InvoiceRenderOptions 
 
     if (typeof navigator !== "undefined" && (navigator as any).canShare?.({ files: [file] })) {
       await (navigator as any).share({
-        title: `Civil At Hand Invoice ${invoiceNo}`,
+        title: `NS Construction Invoice ${invoiceNo}`,
         text: summary,
         files: [file],
       });
@@ -277,7 +277,7 @@ export async function shareInvoice(inv: InvoiceLike, opts: InvoiceRenderOptions 
     }
 
     if (typeof navigator !== "undefined" && navigator.share) {
-      await navigator.share({ title: `Civil At Hand Invoice ${invoiceNo}`, text: summary });
+      await navigator.share({ title: `NS Construction Invoice ${invoiceNo}`, text: summary });
       return;
     }
 
